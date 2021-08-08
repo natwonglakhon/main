@@ -12,7 +12,7 @@ Hi, everyone. My name is Nattaphong Wonglakhon (but I'd prefer calling me "Sparq
 
 Grew up in Thailand and Branch out to Australia
 ======
-I was born in a rural area in Sakon Nakhon province, Northeastern region of Thailand. I moved to Bankok in 2016 to pursue my undergraduate at Department of Physics, Faculty of Science, Mahidol University. I won scholarships to do my PhD at Grifftih University. My PhD project is "Extracting information and controlling quantum systems" where my superviosrs are [Prof. Howard M. Wiseman](https://howardwiseman.me) and [Dr. Areeya Chantasri](https://areeyachantasri.com).
+I was born in a rural area in Sakon Nakhon province, Northeastern region of Thailand. I moved to Bangkok in 2016 to pursue my undergraduate at Department of Physics, Faculty of Science, Mahidol University. I won scholarships to do my PhD at Grifftih University. My PhD project is "Extracting information and controlling quantum systems" where my superviosrs are [Prof. Howard M. Wiseman](https://howardwiseman.me) and [Dr. Areeya Chantasri](https://areeyachantasri.com).
 
 Mention something about quantum physics?
 ======
