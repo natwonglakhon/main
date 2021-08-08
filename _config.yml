@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Nattaphong Wonglakhon"
 title_separator          : "-"
 name                     : "Nattaphong Wonglakhon"
-description              : I'm a PhD student at Centre for Quantum Dynamics, Griffith University, Australia
+description              : "I'm a PhD student at Centre for Quantum Dynamics, Griffith University, Australia"
 url                      : https://academicpages.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "academicpages/academicpages.github.io"
@@ -40,7 +40,7 @@ staticman:
   path                   : "_data/comments/{options.slug}"
   requiredFields         : ['name', 'email', 'message']
   transforms:
-    email                : nat.wonglakhon@gmail.com
+    email                :
   generatedFields:
     date:
       type               : "date"
@@ -57,7 +57,7 @@ yandex_site_verification :
 
 # Social Sharing
 twitter:
-  username               : &viexw_
+  username               : "@viexw_"
 facebook:
   username               : "Nattaphong Wonglakhon"
   app_id                 :
@@ -82,8 +82,8 @@ analytics:
 author:
   name             : "Nattaphong Wonglakhon"
   avatar           : "profile.png"
-  bio              : "Your biography for the left-hand sidebar"
-  location         : "Location"
+  bio              : "I'm a PhD student at Centre for Quantum Dynamics, Griffith University, Australia"
+  location         : "Brisbane, QlD, Australia"
   employer         :
   pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "http://yourfullgooglescholarurl.com"
