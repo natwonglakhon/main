@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-Hi everyone! My name is Nattaphong Wonglakhon (but it's better to call me Sparuqe 😉). I'm a PhD student at Centre for Quantum Dynamics, Griffith University, Australia.
+Hi everyone! My name is Nattaphong Wonglakhon (but it'd prefer calling me Sparque 😉). I'm a PhD student at Centre for Quantum Dynamics ([CQD](https://www.griffith.edu.au/centre-quantum-dynamics)), Griffith University, Australia.
 
 A data-driven personal website
 ======
