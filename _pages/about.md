@@ -16,7 +16,7 @@ I was born in a rural area in Sakon Nakhon province, Northeastern region of Thai
 
 Mention something about quantum physics?
 ======
-Well, when it comes to quantum physics, people tend to think about something like sci-fi thing which they probably got from some movies. From my point of (theorist) view, quantum physics is overwhelming by mathematics. We just explore the [Hilbert Space](https://en.wikipedia.org/wiki/Hilbert_space). LOL. In terms of my previous work (undergrad), it is something like a classical statistics applying to quantum experiments. I proposed a new "map" in order to estimate the quantum trajectory which is more "accurate" than other existing maps (the paper still in preparation).
+Well, when it comes to quantum physics, people tend to think about something like sci-fi thing which they probably got from some movies. From my point of (theorist) view, quantum physics is overwhelmed by mathematics. We just explore the [Hilbert Space](https://en.wikipedia.org/wiki/Hilbert_space). LOL. In terms of my previous work (undergrad), it is something like a classical statistics applying to quantum experiments. I proposed a new "map" in order to estimate the quantum trajectory which is more "accurate" than other existing maps (the paper still in preparation).
 
 Apart from physics?
 ------
