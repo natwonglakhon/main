@@ -12,7 +12,7 @@ Hi, everyone. My name is Nattaphong Wonglakhon (but I'd prefer calling me "Sparq
 
 Grew up in Thailand and Branch out to Australia
 ======
-I was born in a rural area in Sakon Nakhon province, Northeast part of Thailand. I moved to Bankok in 2016 to pursue my undergraduate at Department of Physics, Faculty of Science, Mahidol University. I won scholarships to do my PhD at Grifftih University. My PhD project is "Extracting information and controlling quantum systems" where my superviosrs are [Prof. Howard M. Wiseman](https://howardwiseman.me) and [Dr. Areeya Chantasri](https://areeyachantasri.com).
+I was born in a rural area in Sakon Nakhon province, Northeastern region of Thailand. I moved to Bankok in 2016 to pursue my undergraduate at Department of Physics, Faculty of Science, Mahidol University. I won scholarships to do my PhD at Grifftih University. My PhD project is "Extracting information and controlling quantum systems" where my superviosrs are [Prof. Howard M. Wiseman](https://howardwiseman.me) and [Dr. Areeya Chantasri](https://areeyachantasri.com).
 
 Mention something about quantum physics?
 ======
@@ -20,7 +20,7 @@ Well, when it comes to quantum physics, people tend to think about something lik
 
 Apart from physics?
 ------
-Well, this is really ovious. I'm a pro-democracy supporting the 3 demands of the movement. I am interested in politics and believe in human rights. I'm a big fan of watching movies especially western shows. I spend most of time on IG also being a novice of film photography. I'm obssessed with coffee when I brew by my own. 
+Well, this is really ovious. I'm a pro-democracy supporting the 3 demands of the movement. I am interested in politics and believe in human rights. I'm a big fan of watching movies especially western shows. I spend most of time on IG also being a novice of film photography. I'm obssessed with coffee where I brew by my own. I go out to run in a regular basis whichi I sometimes consider myself as a health freak.
 I guess that's all for now.
 
 
