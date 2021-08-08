@@ -9,8 +9,8 @@
 locale                   : "en-US"
 title                    : Nattaphong Wonglakhon
 title_separator          : "-"
-name                     : &name "Nattaphong Wonglakhon"
-description              : &description "I'm a PhD student at Centre for Quantum Dynamics, Griffith University, Australia"
+name                     : &name Nattaphong Wonglakhon
+description              : &description I'm a PhD student at Centre for Quantum Dynamics, Griffith University, Australia
 url                      : https://academicpages.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "academicpages/academicpages.github.io"
@@ -26,7 +26,7 @@ comments:
     shortname            :
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
-  facebook:
+  facebook: 
     appid                :
     num_posts            : # 5 (default)
     colorscheme          : # "light" (default), "dark"
@@ -40,7 +40,7 @@ staticman:
   path                   : "_data/comments/{options.slug}"
   requiredFields         : ['name', 'email', 'message']
   transforms:
-    email                : "md5"
+    email                : nat.wonglakhon@gmail.com
   generatedFields:
     date:
       type               : "date"
@@ -57,9 +57,9 @@ yandex_site_verification :
 
 # Social Sharing
 twitter:
-  username               : &twitter
+  username               : @viexw_
 facebook:
-  username               :
+  username               : Nattaphong Wonglakhon
   app_id                 :
   publisher              :
 og_image                 :  # Open Graph/Twitter default site image
@@ -80,7 +80,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Sidebar Name"
+  name             : Nattaphong Wonglakhon
   avatar           : "profile.png"
   bio              : "Your biography for the left-hand sidebar"
   location         : "Location"
