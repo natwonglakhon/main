@@ -8,6 +8,6 @@ venue: 'Journal 1'
 paperurl: 'https://iopscience.iop.org/article/10.1088/1742-6596/1719/1/012099'
 citation: 'Nattaphong Wonglakhon et al 2021 J. Phys.: Conf. Ser. 1719 012099'
 ---
-This paper is about the number 1. The number 2 is left for future work.
+This is my proceeding paper. It consists my undergrad partial work (simulation results), while the entire results (both analytic and simulation) will be published soon.
 
 [Download paper here](files/Euler-Milstein and relevant approaches for high-precision stochastic simulation of quantum trajectories.pdf)
