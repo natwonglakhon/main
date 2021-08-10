@@ -34,9 +34,7 @@ Skills
 
 Publications
 ======
-  <ul>{% https://iopscience.iop.org/article/10.1088/1742-6596/1719/1/012099% }
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+{% for post in site.publications %} {% include archive-single-cv.html %} {% endfor %}
   
 Talks
 ======
