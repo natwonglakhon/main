@@ -34,7 +34,7 @@ Skills
 
 Publications
 ======
-  <ul>{% for post in site.publications %}
+  <ul>{https://iopscience.iop.org/article/10.1088/1742-6596/1719/1/012099}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
   
@@ -44,12 +44,3 @@ Talks
     {% include archive-single-talk-cv.html %}
   {% endfor %}</ul>
   
-Teaching
-======
-  <ul>{% for post in site.teaching %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
