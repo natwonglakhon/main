@@ -16,7 +16,7 @@ I was born and grew up in a rural area in Sakon Nakhon province, northeastern re
 
 Mention something about your previous work?
 ======
-My work is about quantum information. Well, when it comes to quantum physics, people tend to think about something like sci-fi, explaining something unexplainable, which they probably got from some movies (ha). From my point of (a novice theorist) view, quantum physics is overwhelmed by mathematics. What we actually do is We just explore a [Hilbert Space](https://en.wikipedia.org/wiki/Hilbert_space). LOL. 
+My work is about quantum information. Well, when it comes to quantum physics, people tend to think about something like sci-fi, explaining something unexplainable, which they probably got from some movies (ha). From my point of view of a novice theorist, quantum physics is overwhelmed by mathematics. What we actually do is we just explore a [Hilbert Space](https://en.wikipedia.org/wiki/Hilbert_space). LOL. 
 
 In terms of my previous work (undergrad), it is something like a classical statistics applying to quantum experiments. My co-workers and I proposed a new "map" in order to estimate a quantum trajectory which is more "accurate" than other existing maps (the paper still in preparation 🥲).
 
