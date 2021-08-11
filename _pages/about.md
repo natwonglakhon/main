@@ -19,10 +19,10 @@ Mention something about quantum physics?
 Well, when it comes to quantum physics, people tend to think about something like sci-fi thing which they probably got from some movies. From my point of (theorist) view, quantum physics is overwhelmed by mathematics. We just explore the [Hilbert Space](https://en.wikipedia.org/wiki/Hilbert_space). LOL. In terms of my previous work (undergrad), it is something like a classical statistics applying to quantum experiments. I proposed a new "map" in order to estimate a quantum trajectory which is more "accurate" than other existing maps (the paper still in preparation 🥲).
 
 Apart from physics?
-------
+======
 Well, this is really ovious. I'm a pro-democracy supporting the 3 demands of the movement. I am interested in politics and believe in human rights. I'm a big fan of watching movies especially western shows. I spend most of time on IG also being a novice of film photography. I'm obsessed with coffee where I brew by my own. I go out to run in a regular basis which I sometimes consider myself as a health freak.
 I guess that's all for now.
 
 I love coffee!
-======
+------
 <img src="images/coffee.png" alt="hi" class="inline"/>
