@@ -1,7 +1,7 @@
 ---
 title: 'Running'
 date: 2021-08-11
-permalink: /posts/2012/08/blog-post-4/
+permalink: /posts/2021/08/blog-post-run/
 tags:
   - Running
   - Exercising
