@@ -20,6 +20,6 @@ Well, when it comes to quantum physics, people tend to think about something lik
 
 Apart from physics?
 ------
-Well, this is really ovious. I'm a pro-democracy supporting the 3 demands of the movement. I am interested in politics and believe in human rights. I'm a big fan of watching movies especially western shows. I spend most of time on IG also being a novice of film photography. I'm obssessed with coffee where I brew by my own. I go out to run in a regular basis which I sometimes consider myself as a health freak.
+Well, this is really ovious. I'm a pro-democracy supporting the 3 demands of the movement. I am interested in politics and believe in human rights. I'm a big fan of watching movies especially western shows. I spend most of time on IG also being a novice of film photography. I'm obsessed with coffee where I brew by my own. I go out to run in a regular basis which I sometimes consider myself as a health freak.
 I guess that's all for now.
-<img src="images/Emoticons/coffee.png" alt="hi" class="inline"/>
+<img src="images/coffee.png" alt="hi" class="inline"/>
