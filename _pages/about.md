@@ -14,9 +14,9 @@ Grew up in Thailand and Branch out to Australia
 ======
 I was born in a rural area in Sakon Nakhon province, Northeastern region of Thailand. I moved to Bangkok in 2016 to pursue my undergraduate at Department of Physics, Faculty of Science, Mahidol University. I won scholarships to do my PhD at Grifftih University. My PhD project is "Extracting information and controlling quantum systems" where my supervisors are [Prof. Howard M. Wiseman](https://howardwiseman.me) and [Dr. Areeya Chantasri](https://areeyachantasri.com).
 
-Mention something about quantum physics?
+Mention something about your previous work?
 ======
-Well, when it comes to quantum physics, people tend to think about something like sci-fi thing which they probably got from some movies. From my point of (theorist) view, quantum physics is overwhelmed by mathematics. We just explore the [Hilbert Space](https://en.wikipedia.org/wiki/Hilbert_space). LOL. In terms of my previous work (undergrad), it is something like a classical statistics applying to quantum experiments. I proposed a new "map" in order to estimate a quantum trajectory which is more "accurate" than other existing maps (the paper still in preparation 🥲).
+My work is about quantum information. Well, when it comes to quantum physics, people tend to think about something like sci-fi, explaining something unexplainable, which they probably got from some movies (ha). From my point of (a novice theorist) view, quantum physics is overwhelmed by mathematics. We just explore the [Hilbert Space](https://en.wikipedia.org/wiki/Hilbert_space). LOL. In terms of my previous work (undergrad), it is something like a classical statistics applying to quantum experiments. I proposed a new "map" in order to estimate a quantum trajectory which is more "accurate" than other existing maps (the paper still in preparation 🥲).
 
 Apart from physics?
 ======
