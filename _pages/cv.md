@@ -22,7 +22,7 @@ Work experience
   * Griffith University
   * Project  titled "Euler-Milstein numerical scheme for high-precision stochastic process simulation of quantum trajectories"
   * Duties included: Proving the mathematical equations and coding computer programming for the simulations
-  * Supervisor: Dr. Areeya Chantasri and Professor Howard M. Wiseman
+  * Supervisors: Dr. Areeya Chantasri and Professor Howard M. Wiseman
 
   
 Skills
