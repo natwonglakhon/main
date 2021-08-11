@@ -51,3 +51,5 @@ Talks
     {% include archive-single-talk-cv.html %}
   {% endfor %}</ul>
   
+ My official CV can be reached [here](https://www.dropbox.com/s/l02n6otmdqrezxo/NattaphongBsCV.pdf?dl=0)
+ -----
