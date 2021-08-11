@@ -25,7 +25,7 @@ This figure displays a quantum (qubit) system is being measured, and the measure
 
 Apart from physics?
 ======
-Well, it is quite ovious. I am interested in politics and believe in human rights. I'm a big fan of watching movies especially western shows. I spend most of time on IG also being a novice of film photography. I'm obsessed with coffee where I can brew by my own. I go out to run in a regular basis which I sometimes consider myself as a health freak.
+Well, it is quite obvious. I am interested in politics and believe in human rights. I'm a big fan of watching movies especially western shows. I spend most of time on IG also being a novice of film photography. I'm obsessed with coffee where I can brew by my own. I go out to run in a regular basis which I sometimes consider myself as a health freak.
 I guess that's all for now.
 
 I love coffee!
