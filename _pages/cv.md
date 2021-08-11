@@ -36,7 +36,7 @@ Skills
   * Python
   * Matlab
 
-GRANT & AWARDS
+Grant & Awards
 ======
 * Royal Government of Thailand Scholarship (Development and Promotion of Science and Technology Talents Project--DPST) for studying in Thailand -- 2016
 * First prize physics senior project presentation at DPST Conference -- July 2020
