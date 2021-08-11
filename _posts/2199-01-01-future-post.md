@@ -1,11 +1,12 @@
 ---
 title: 'Running'
-date: 2199-01-01
+date: 2021-08-11
 permalink: /posts/2012/08/blog-post-4/
 tags:
-  - cool posts
-  - category1
-  - category2
+  - Running
+  - Exercising
 ---
 
-This post will show up by default. To disable scheduling of future posts, edit `config.yml` and set `future: false`. 
+I am a big fan of running. I go out to run in a regular basis. I discover that it can enormously keep my mental health in a postive way.
+![5fd566e3e5aa10763741d751](https://user-images.githubusercontent.com/88487585/128987861-92364a46-9695-44be-be61-c2b0b9959951.jpg)
+
