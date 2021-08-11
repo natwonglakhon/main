@@ -20,7 +20,7 @@ My work is about quantum information. Well, when it comes to quantum physics, pe
 
 <img width="389" alt="Screen Shot 2021-08-11 at 14 43 59" src="https://user-images.githubusercontent.com/88487585/128989954-1a3f5119-c458-49d9-9217-e7a741b7d2f7.png">
 
-This figure displays a quantum (qubit) system is being measured, and the measurement records are then collected. We will use the maps to estimate the quantum trajectories, which can be used to represtent the quantum system's dynamics. (Wow, that's too much physics. 🤢)
+This figure displays a quantum (qubit) system is being measured, and the measurement records are then collected. We will use the maps to estimate the quantum trajectories conditioned on those records, which can be used to represtent the quantum system's dynamics. (Wow, that's too much physics. 🤢)
 
 
 Apart from physics?
