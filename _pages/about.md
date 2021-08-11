@@ -19,6 +19,7 @@ Mention something about your previous work?
 My work is about quantum information. Well, when it comes to quantum physics, people tend to think about something like sci-fi, explaining something unexplainable, which they probably got from some movies (ha). From my point of (a novice theorist) view, quantum physics is overwhelmed by mathematics. We just explore the [Hilbert Space](https://en.wikipedia.org/wiki/Hilbert_space). LOL. In terms of my previous work (undergrad), it is something like a classical statistics applying to quantum experiments. I proposed a new "map" in order to estimate a quantum trajectory which is more "accurate" than other existing maps (the paper still in preparation 🥲).
 
 <img width="389" alt="Screen Shot 2021-08-11 at 14 43 59" src="https://user-images.githubusercontent.com/88487585/128989954-1a3f5119-c458-49d9-9217-e7a741b7d2f7.png">
+This figure displays a quantum (qubit) system is being measured, and the measurement records are then collected. We will use the maps to estimate the quantum trajectories, which can be used to represtent the quantum system's dynamics. (Wow, that's too much physics. 🤢)
 
 
 Apart from physics?
