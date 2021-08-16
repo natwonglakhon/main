@@ -15,6 +15,7 @@ Education
   * Thesis title : High-precision Numerical Scheme for Quantum Trajectories
   * Details: Thesis length 11,520 words, undertaken over two semesters full-time of the fourth year. In this thesis, I combined research results produced during my research visit at Centre for Quantum Dynamics, Griffith University, and during the fourth year of my honour program. In broad terms, I proposed a new approach for quantum-trajectory estimations, which is more precise and accurate than previously proposed methods. Moreover, I also made a comparison among all approaches both analytically and numerically, in order to show that my new approach is the most accurate one.
   * Superviors:  Asst. Prof. Sujin Suwanna, Dr. Areeya Chantasri
+  * File [here](https://www.dropbox.com/s/ilblhs4o4ct7t76/Nattaphong_BScThesis-Submitted-Vertion.pdf?dl=0)
 
 Work experience
 ======
