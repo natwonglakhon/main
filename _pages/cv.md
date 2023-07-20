@@ -54,5 +54,5 @@ Talks
     {% include archive-single-talk-cv.html %}
   {% endfor %}</ul>
   
- My official CV can be reached [here](https://www.dropbox.com/s/l02n6otmdqrezxo/NattaphongBsCV.pdf?dl=0)
+ My official CV can be reached [here](https://www.dropbox.com/scl/fi/q3bv7ea9djce4ytg74gjp/Nattaphong-CV-Griffith.pdf?rlkey=qjkw6mdnwy93qy60ls72cah0o&dl=0)
  -----
