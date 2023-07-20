@@ -33,7 +33,7 @@ Skills
   * Quantum trajectory estimation techniques
   * Stochastic processes
   * Quantum control techniques
-  * Quantum noise spectoscopy
+  * Quantum noise spectroscopy
 * Numerical analysis
   * Python
   * Matlab
