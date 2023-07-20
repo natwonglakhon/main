@@ -10,7 +10,7 @@ redirect_from:
 
 G-day, everyone. My name is Nattaphong Wonglakhon (but you can call my coffee name, Nathan, for convenience 😉). I'm a PhD researcher at Centre for Quantum Dynamics ([CQD](https://www.griffith.edu.au/centre-quantum-dynamics)), Griffith University, Australia.
 
-Grew up in Thailand and now at The Land Down Under
+Grew up in Thailand and now in The Land Down Under
 ======
 I was born and grew up in Sakon Nakhon province, north-eastern region of Thailand. I moved to Bangkok in 2016 to pursue my undergraduate at The Department of Physics, Faculty of Science, Mahidol University. I am currently doing my PhD at Grifftih University. My PhD projects are "Extracting information and controlling quantum systems" where my supervisors are [Dr. Gerardo Paz Silva](https://experts.griffith.edu.au/8207-gerardo-paz-silva) and [Prof. Howard M. Wiseman](https://howardwiseman.me). We are particularly focusing on quantum metrology in the presence of quantum noise and control. 
 
