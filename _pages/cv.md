@@ -11,38 +11,42 @@ redirect_from:
 
 Education
 ======
-* Bechelor of Science (Physics, first class honours), Mahidol University, 2016-2020
-  * Thesis title : High-precision Numerical Scheme for Quantum Trajectories
+* Doctor of Philosophy (Physics), Griffith Univeristy, Brisbane, Australia, 2021-2025
+  * Thesis title : Extracting information and controlling quantum systems
   * Details: Thesis length 11,520 words, undertaken over two semesters full-time of the fourth year. In this thesis, I combined research results produced during my research visit at Centre for Quantum Dynamics, Griffith University, and during the fourth year of my honour program. In broad terms, I proposed a new approach for quantum-trajectory estimations, which is more precise and accurate than previously proposed methods. Moreover, I also made a comparison among all approaches both analytically and numerically, in order to show that my new approach is the most accurate one.
+  * Superviors:  Prof. Howard M. Wiseman (principle) and Dr. Gerardo A. Paz-Silva.
+* Bechelor of Science (Physics, first class honours), Mahidol University, Bangkok, Thailand, 2016-2020
+  * Thesis title : High-precision Numerical Scheme for Quantum Trajectories
   * Superviors:  Asst. Prof. Sujin Suwanna, Dr. Areeya Chantasri
-  * File [here](https://www.dropbox.com/s/ilblhs4o4ct7t76/Nattaphong_BScThesis-Submitted-Vertion.pdf?dl=0)
+  * File [here](https://drive.google.com/file/d/1g1kaBhbjXxyn6--twQW79DSxS9Uaze9z/view?usp=drive_link)
 
-Work experience
+TEACHING EXPERIENCE
 ======
-* Summer 2019: Research Assistant
-  * Griffith University
-  * Project  titled "Euler-Milstein numerical scheme for high-precision stochastic process simulation of quantum trajectories"
-  * Duties included: Proving the mathematical equations and coding computer programming for the simulations
-  * Supervisors: Dr. Areeya Chantasri and Professor Howard M. Wiseman
+* Teaching assistant 
+  * Physics 1A and Engineering Science (SCG3241/ENG3241) – March - June 2024
+    * Griffith University, Brisbane, Queensland, Australia
+    * Undergraduate-level course
+    * Main instructor: Dr. Sarah Walden
+    * Responsible for workshops teaching and grading assignments
+  * EngineeringMathematics2andCalculus1(ENG3245/SCG3245)–March-June2023
+    * Griffith University, Brisbane, Queensland, Australia
+    * Undergraduate-level course
+    * Main instructor: Dr. James Bennett
+    * Responsible for workshops teaching and grading assignments
 
   
 Skills
 ======
 * Theories
-  * Quantum open system principles
-  * Quantum trajectory estimation techniques
-  * Stochastic processes
-  * Quantum control techniques
-  * Quantum noise spectroscopy
-* Numerical analysis
-  * Python
-  * Matlab
-  * Mathematica
+  * Quantum information theory; open quantum system principles, quantum mea- surement theory; quantum non-Markovianity, quantum noise spectroscopy and quantum metrology
+* Software skills
+  * Computer programming and numerical analysis: Python, Mathematica and MATLAB.
 
 Grant & Awards
 ======
-* Royal Government of Thailand Scholarship (Development and Promotion of Science and Technology Talents Project--DPST) for studying in Thailand -- 2016
+* Griffith University International Postgraduate Research Scholarship – 2021
 * First prize physics senior project presentation at DPST Conference -- July 2020
+* Royal Government of Thailand Scholarship (Development and Promotion of Science and Technology Talents Project--DPST) for studying in Thailand -- 2016
 
 Publications
 ======
@@ -54,5 +58,20 @@ Talks
     {% include archive-single-talk-cv.html %}
   {% endfor %}</ul>
   
- My official CV can be reached [here](https://www.dropbox.com/scl/fi/q3bv7ea9djce4ytg74gjp/Nattaphong-CV-Griffith.pdf?rlkey=qjkw6mdnwy93qy60ls72cah0o&dl=0)
+ My official CV can be reached [here](https://drive.google.com/file/d/102ZFRjh5OmXfI2OsuvJoII9yzP7Tiy_3/view?usp=drive_link)
+
+ REFERENCES AVAILABLE TO CONTACT
+ ======
+ * Prof. Howard M. Wiseman
+  * Contact email: h.wiseman@griffith.edu.au; phone: +61 7 3735 7271
+  * Centre for Quantum Dynamics, Griffith University
+  * Prof. Wiseman is my co-supervisor at Griffith University
+* Dr. Gerardo A. Paz-Silva
+  * Contact email: gerardo.pazsilva@diraq.com
+  * Quantum Noise and Control Theorist, Diraq (Sydney)
+  * Dr. Paz-silva is my current associate supervisor at Griffith University
+* Assoc. Prof. Areeya Chantasri
+  * Contact email: areeya.chn@mahidol.ac.th: phone +66 85 840 8605
+  * Optical and Quantum Physics Laboratory, Department of Physics, Faculty of Science, Mahidol University
+  * Dr. Chantasri was my co-supervisor at Mahidol University
  -----
