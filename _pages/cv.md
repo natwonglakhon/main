@@ -13,7 +13,6 @@ Education
 ======
 * Doctor of Philosophy (Physics), Griffith Univeristy, Brisbane, Australia, 2021-2025
   * Thesis title : Extracting information and controlling quantum systems
-  * Details: Thesis length 11,520 words, undertaken over two semesters full-time of the fourth year. In this thesis, I combined research results produced during my research visit at Centre for Quantum Dynamics, Griffith University, and during the fourth year of my honour program. In broad terms, I proposed a new approach for quantum-trajectory estimations, which is more precise and accurate than previously proposed methods. Moreover, I also made a comparison among all approaches both analytically and numerically, in order to show that my new approach is the most accurate one.
   * Superviors:  Prof. Howard M. Wiseman (principle) and Dr. Gerardo A. Paz-Silva.
 * Bechelor of Science (Physics, first class honours), Mahidol University, Bangkok, Thailand, 2016-2020
   * Thesis title : High-precision Numerical Scheme for Quantum Trajectories
@@ -62,7 +61,7 @@ Talks
 
  REFERENCES AVAILABLE TO CONTACT
  ======
- * Prof. Howard M. Wiseman
+* Prof. Howard M. Wiseman
   * Contact email: h.wiseman@griffith.edu.au; phone: +61 7 3735 7271
   * Centre for Quantum Dynamics, Griffith University
   * Prof. Wiseman is my co-supervisor at Griffith University
