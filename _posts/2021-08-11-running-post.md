@@ -7,7 +7,7 @@ tags:
   - Exercising
 ---
 
-I am a big fan of running. I go out to run in a regular basis. I discover that it can enormously keep my mental health in a postive way. :)
+I am a big fan of running. I go out to run in a regular basis. I have discovered that it can enormously keep my mental health in a postive way. :)
 
 In December 2020, I joined the Bangkok run (minin marathon), taking 57:12 mins. for 10.15 km.
 
