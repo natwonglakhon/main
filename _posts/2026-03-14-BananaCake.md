@@ -24,7 +24,7 @@ First, you want to mash the banana.
 ![Banana](https://github.com/natwonglakhon/main/blob/189ca0b5d8b31c2d18128c31211b796d15da8769/images/Bananacake/1.jpeg?raw=true)
 
 
-Then, add the egg and stir them together. 
+Then, add the egg and oat, and stir them together. 
 ![eggs](https://github.com/natwonglakhon/main/blob/189ca0b5d8b31c2d18128c31211b796d15da8769/images/Bananacake/2.jpeg?raw=true)
 
 Once ready, you can optionally add honey, cocoa powder and nuts as you wish.
