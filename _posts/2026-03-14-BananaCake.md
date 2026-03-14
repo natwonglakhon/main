@@ -19,7 +19,7 @@ For a bit of flavour, you can add honey and cocoa powder as you like. I also add
 How to cook
 ======
 First, you want to mash the banana.
-![1](https://github.com/natwonglakhon/main/blob/master/images/Bananacake/1.JPEG?raw=true)
+![Banana](https://github.com/natwonglakhon/main/blob/master/images/Bananacake/1.JPEG?raw=true)
 
 Then, add the egg and stir them together. 
 ![Flights](https://github.com/natwonglakhon/main/blob/master/images/Asia2025_photos/Overall.PNG?raw=true)
