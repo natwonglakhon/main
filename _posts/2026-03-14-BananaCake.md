@@ -13,6 +13,7 @@ Depending on how much you want, here I do the following ratio that works for me:
   * 1 banana
   * 1 egg
   * 4 tbsp of oat
+
 Note that if you want a bigger size, you may do a ratio of 2:2:8, respectively.
 
 For a bit of flavour, you can add honey and cocoa powder as you like. I also add some nuts, such as pepitas and walnuts.
