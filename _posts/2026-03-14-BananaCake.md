@@ -1,9 +1,9 @@
 ---
-title: 'Flourless Banana cake recipe'
+title: 'Flourless Banana bread recipe'
 date: 2026-03-14
 permalink: /posts/2026/03/blog-post-Banana Cake/
 tags:
-  - Banana Cake
+  - Banana bread
   - Flourless
 ---
 
@@ -27,10 +27,10 @@ First, you want to mash the banana.
 Then, add the egg and stir them together. 
 ![eggs](https://github.com/natwonglakhon/main/blob/189ca0b5d8b31c2d18128c31211b796d15da8769/images/Bananacake/2.jpeg?raw=true)
 
-Once ready, you can optionally add honey, cocoa powder and nuts as you like.
+Once ready, you can optionally add honey, cocoa powder and nuts as you wish.
 ![Optional](https://github.com/natwonglakhon/main/blob/189ca0b5d8b31c2d18128c31211b796d15da8769/images/Bananacake/3.jpeg?raw=true)
 
-Last, put it to your oven/air fryer. Setting the temperature to 160C for 15 mins.
+Lastly, put it in your oven/air fryer. Setting the temperature to 160C for 15 mins.
 Congratulations! You have a very healthy bread.
 ![Bake](https://github.com/natwonglakhon/main/blob/189ca0b5d8b31c2d18128c31211b796d15da8769/images/Bananacake/4.jpeg?raw=true)
 
