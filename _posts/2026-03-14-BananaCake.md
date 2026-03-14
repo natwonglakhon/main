@@ -9,10 +9,10 @@ tags:
 
 Ingredients
 ======
-Depending on how much you want, here I doing the following ratio that works for me:
-1 banana
-1 eggs
-4 tbsp of oat
+Depending on how much you want, here I do the following ratio that works for me:
+  * 1 banana
+  * 1 eggs
+  * 4 tbsp of oat
 
 For a bit of flavour, you can add honey and cocoa powder as you like. I also add some nuts, such as pepitas and walnuts.
 
