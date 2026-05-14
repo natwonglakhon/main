@@ -59,19 +59,3 @@ Talks
   
  My official CV can be reached [here](https://drive.google.com/file/d/102ZFRjh5OmXfI2OsuvJoII9yzP7Tiy_3/view?usp=drive_link)
 
-
- REFERENCES AVAILABLE TO CONTACT
- ======
- 
-* Prof. Howard M. Wiseman
-  * Contact email: h.wiseman@griffith.edu.au; phone: +61 7 3735 7271
-  * Centre for Quantum Dynamics, Griffith University
-  * Prof. Wiseman is my co-supervisor at Griffith University
-* Dr. Gerardo A. Paz-Silva
-  * Contact email: gerardo.pazsilva@diraq.com
-  * Quantum Noise and Control Theorist, Diraq (Sydney)
-  * Dr. Paz-silva is my current associate supervisor at Griffith University
-* Assoc. Prof. Areeya Chantasri
-  * Contact email: areeya.chn@mahidol.ac.th: phone +66 85 840 8605
-  * Optical and Quantum Physics Laboratory, Department of Physics, Faculty of Science, Mahidol University
-  * Dr. Chantasri was my co-supervisor at Mahidol University
