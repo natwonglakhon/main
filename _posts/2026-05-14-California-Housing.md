@@ -59,23 +59,23 @@ Looking at feature importance, median income is by far the strongest predictor, 
 
 **Target distribution (after filtering)**
 
-![Price Distribution](https://github.com/natwonglakhon/California_Housing_Model/images/median_house_value_distribution_filtered.png)
+![Price Distribution](https://github.com/natwonglakhon/California_Housing_Model/blob/main/images/median_house_value_distribution_filtered.png)
 
 **Feature vs Price**
 
-![Data vs Price](https://github.com/natwonglakhon/California_Housing_Model/images/data_vs_price.png)
+![Data vs Price](https://github.com/natwonglakhon/California_Housing_Model/blob/main/images/data_vs_price.png)
 
 **Test data vs Linear Regression Prediction**
 
-![Test vs Prediction](https://github.com/natwonglakhon/California_Housing_Model/images/Test_vs_model.png)
+![Test vs Prediction](https://github.com/natwonglakhon/California_Housing_Model/blob/main/images/Test_vs_model.png)
 
 **Test data vs Random Forest Prediction**
 
-![Test vs RF Prediction](https://github.com/natwonglakhon/California_Housing_Model/images/Test_vs_model_rf.png)
+![Test vs RF Prediction](https://github.com/natwonglakhon/California_Housing_Model/blob/main/images/Test_vs_model_rf.png)
 
 **Feature Importance (Random Forest)**
 
-![Feature Importance](https://github.com/natwonglakhon/California_Housing_Model/images/feature_importance.png)
+![Feature Importance](https://github.com/natwonglakhon/California_Housing_Model/blob/main/images/feature_importance.png)
 
 ---
 
