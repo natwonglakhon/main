@@ -23,3 +23,9 @@ This figure displays a quantum (qubit) system being measured, and the measuremen
 During my PhD, I focused on improving quantum continuous (weak) measurement (see Figure above), under supervisions of [Dr. Areeya Chantasri](https://areeyachantasri.com) and [Prof. Howard M. Wiseman](https://howardwiseman.me). We proposed a new approach or map which provides a better estimation of quantum trajectory compared to other existing approaches. The new "map" outperforms the others both analytically and numerically.
 
 For the second project of my PhD, I investigated controlled quantum systems subject to temporally correlated nonclassical noise, under the supervision of [Dr. Gerardo Paz Silva](https://experts.griffith.edu.au/8207-gerardo-paz-silva) and in collaboration with Prof. Lorenza Viola’s group at Dartmouth College, USA. I studied control limitations relevant to quantum error correction, developed and analysed optimal protocols for noise detection, and explored controlled quantum metrology in the presence of correlated noise.
+
+
+Modelling and Machine Learning projects
+======
+* [Quantum trajectory simulations: stochastic modelling.](https://natwonglakhon.github.io/main//Quantum-Trajectories/)
+* California Housing models: Linear Regression and Random Forest.
