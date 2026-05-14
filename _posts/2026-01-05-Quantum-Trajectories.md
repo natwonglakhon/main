@@ -3,6 +3,9 @@
 
 A Python codebase for simulating and benchmarking quantum trajectory methods using higher-order stochastic integration schemes. The project reproduces numerical results from research on high-order quantum trajectory reconstruction, comparing five distinct simulation maps via trace-distance error analysis.
 
+
+## [Click here for Repository](https://github.com/natwonglakhon/High-order-quantum-trajectory-simulation)
+
 ---
 
 ## Overview
@@ -20,9 +23,5 @@ Quantum trajectory simulation involves reconstructing a quantum state conditione
 Error is quantified by the **trace distance** between a simulated conditioned state and the true quantum trajectory.
 
 ![Quantum trajectory simulations](https://github.com/natwonglakhon/main/blob/master/images/Simulation_prev/Qtraj_prev.png?raw=true)
-Overall flights.
-
----
-
-## [Go to Repository](https://github.com/natwonglakhon/High-order-quantum-trajectory-simulation)
+Simulation examples: qubit-z measurement.
 
