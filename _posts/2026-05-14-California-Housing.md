@@ -8,6 +8,8 @@ A machine learning project that predicts California median house prices using tw
 
 This project covers a full ML pipeline, starting from raw data exploration and cleaning, through to model training, evaluation, and visualisation, using the California Housing dataset.
 
+## [Click here for Repository](https://github.com/natwonglakhon/California_Housing_Model) 
+
 ---
 
 ## Dataset
