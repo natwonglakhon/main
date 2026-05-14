@@ -7,13 +7,13 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Nattaphong Wonglakhon"
+title                    : "Nate W"
 title_separator          : "-"
-name                     : "Nattaphong Wonglakhon"
-description              : "PhD student at Centre for Quantum Dynamics, Griffith University, Australia"
-url                      : https://natwonglakhon.github.io/main/ # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+name                     : "Nate (Nattaphong Wonglakhon)"
+description              : "PhD physicst"
+url                      : https://natwonglakhon.github.io/main # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "https://natwonglakhon.github.io/main/"
+repository               : "https://natwonglakhon.github.io/main"
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
@@ -80,9 +80,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "Nattaphong Wonglakhon"
+  name             : "Nate W"
   avatar           : "profile.png"
-  bio              : "PhD researcher at Centre for Quantum Dynamics, Griffith University, Australia"
+  bio              : "PhD researcher"
   location         : "Brisbane, QLD, Australia"
   employer         :
   pubmed           : 
