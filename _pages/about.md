@@ -28,4 +28,4 @@ For the second project of my PhD, I investigated controlled quantum systems subj
 Modelling and Machine Learning projects
 ======
 * [Quantum trajectory simulations: stochastic modelling.](https://natwonglakhon.github.io/main//Quantum-Trajectories/)
-* California Housing models: Linear Regression and Random Forest.
+* [California Housing models: Linear Regression and Random Forest.](https://natwonglakhon.github.io/main//Quantum-Trajectories/)
