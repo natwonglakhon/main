@@ -36,7 +36,8 @@ The first thing I looked at was how many words each album contains in total, and
 
 **Reputation** has the highest mean word count per track, making it her most lyrically dense album on average. On the other end, **The Life of a Showgirl** has the highest mean *unique* word count per track, suggesting more varied vocabulary relative to its size.
 
-![Album word count — unique vs non-unique words, sorted by words per track](PLOT_01_album_word_count.png)
+![Album word count — unique vs non-unique words, sorted by words per track](https://github.com/natwonglakhon/Taylor_Swift_Lyrics/blob/bfcf29fe7e57218fb3bcc0726c860790b7693df5/images/Total_words_per_album.png?raw=true)
+
 
 When looking at the ratio of unique to total words across the entire album, **The Tortured Poets Department: The Anthology** leads with a 48% unique word ratio — nearly half of all words used are distinct. This is remarkable for a double album of that length.
 
