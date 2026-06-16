@@ -146,7 +146,7 @@ Across 251 songs and 20 years of releases, some patterns emerge clearly:
 
 ### Limitations
 
-A few caveats worth noting. First, words with different tenses are treated as distinct — "remember" and "remembered" count separately, which inflates vocabulary counts slightly. Second, songs commonly associated with Taylor Swift that she did not perform (such as *"This Is What You Came For"*) are not included. Third, because Taylor's Version releases are used where available, some original lyrics differ — for example, the original *"Better Than Revenge"* contains lyrics not present in this dataset, which was a deliberate choice.
+A few caveats worth noting. First, words with different tenses are treated as distinct — "remember" and "remembered" count separately, which inflates vocabulary counts slightly. Second, songs commonly associated with Taylor Swift that she did not perform (such as *"This Is What You Came For"*) are not included. Third, because Taylor's Version releases are used where available, some original lyrics differ, e.g., the original *"Better Than Revenge"* contains lyrics not present in this dataset, which was a deliberate choice.
 
 ---
 
