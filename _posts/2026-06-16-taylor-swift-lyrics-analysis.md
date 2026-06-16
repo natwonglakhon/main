@@ -54,7 +54,7 @@ Tracing word count chronologically from 2006 to 2025, there is a general growth 
 
 ### Signature Words per Album (TF-IDF)
 
-To find the most characteristic words for each album — words that are common within that album but rare across others — I used TF-IDF (Term Frequency–Inverse Document Frequency). See more in the Jupyter notebook for definition.
+To find the most characteristic words for each album (words that are common within that album but rare across others), I used TF-IDF (Term Frequency–Inverse Document Frequency). See more in my Jupyter notebook for definition and explanation.
 
 Some standout results:
 
