@@ -2,7 +2,7 @@
 
 *June 2026*
 
-As someone who grew up and learn English with her musics and to honour her [songwriters hall of fame induction](https://www.songhall.org/profiles/ts), I analysed 251 Taylor Swift songs, including 12 studio albums, movie soundtracks, and vault tracks. How many words does she use? Which albums have the richest vocabulary? What are her most signature words? And which songs are lyrically most similar to each other?
+As someone who grew up and learn English with her musics and to honour her [songwriters hall of fame induction](https://www.songhall.org/profiles/ts), it would be fun to learn more about her musics. Here, I analysed 251 Taylor Swift songs across 12 studio albums, movie soundtracks, and vault tracks. How many words does she use? Which albums have the richest vocabulary? What are her most signature words? And which songs are lyrically most similar to each other?
 
 All lyrics were retrieved from the [Genius API](https://genius.com/api-clients) using `lyricsgenius` and `BeautifulSoup`, then cleaned and analysed in Python with `pandas`, `scikit-learn`, and `seaborn`. The full code is available on [GitHub](https://github.com/natwonglakhon/Taylor_Swift_Lyrics).
 
@@ -132,7 +132,7 @@ Looking at the most frequent two-word combinations across all lyrics:
 
 Using *TF-IDF vectors* and *cosine similarity*, I computed a pairwise similarity score between every song pair. The results:
 
-- **Most similar**: *All Too Well (10-Minute Version)* and *All Too Well*, unsurprisingly of course, since one is a an extension of the other, sharing the bulk of their lyrics
+- **Most similar**: *All Too Well (10-Minute Version)* and *All Too Well*, unsurprisingly of course, since one is an extension of the other, sharing the bulk of their lyrics
 - **Second most similar**: *Dorothea* and *Safe & Sound* with 55% similarity, which is a genuinely interesting pairing across very different eras (Evermore and The Hunger Games soundtrack respectively)
 
 ![Top 20 most lyrically similar song pairs](https://github.com/natwonglakhon/Taylor_Swift_Lyrics/blob/430250fb615ad731350fb1527590f50d1f9f5b57/images/Top_similar_songs.png?raw=true)
