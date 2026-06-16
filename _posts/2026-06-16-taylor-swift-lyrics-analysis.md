@@ -77,6 +77,8 @@ The shortest by word count is **"It's Nice to Have a Friend"** from Lover, a 2:3
 
 ![Top 10 songs by word count](https://github.com/natwonglakhon/Taylor_Swift_Lyrics/blob/bfcf29fe7e57218fb3bcc0726c860790b7693df5/images/top_songs_by_words.png?raw=true)
 
+![Top 10 smallest songs by word count](https://github.com/natwonglakhon/Taylor_Swift_Lyrics/blob/430250fb615ad731350fb1527590f50d1f9f5b57/images/smallest_songs_by_words.png?raw=true)
+
 ### Most Unique Songs
 
 The most interesting finding from the song-level analysis is vocabulary uniqueness. **"The Manuscript"** from The Tortured Poets Department is the most unique song in her discography, with 68% of its words being distinct (meaning she barely repeats herself throughout the entire song).
