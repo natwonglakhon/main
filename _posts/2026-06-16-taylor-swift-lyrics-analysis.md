@@ -2,7 +2,7 @@
 
 *June 2026*
 
-As someone who grew up and lean English with her musics and to honour her [songwriters hall of fame induction](https://www.songhall.org/profiles/ts), I analysed 251 Taylor Swift songs, including 12 studio albums, movie soundtracks, and vault tracks. How many words does she use? Which albums have the richest vocabulary? What are her most signature words? And which songs are lyrically most similar to each other?
+As someone who grew up and learn English with her musics and to honour her [songwriters hall of fame induction](https://www.songhall.org/profiles/ts), I analysed 251 Taylor Swift songs, including 12 studio albums, movie soundtracks, and vault tracks. How many words does she use? Which albums have the richest vocabulary? What are her most signature words? And which songs are lyrically most similar to each other?
 
 All lyrics were retrieved from the [Genius API](https://genius.com/api-clients) using `lyricsgenius` and `BeautifulSoup`, then cleaned and analysed in Python with `pandas`, `scikit-learn`, and `seaborn`. The full code is available on [GitHub](https://github.com/natwonglakhon/Taylor_Swift_Lyrics).
 
