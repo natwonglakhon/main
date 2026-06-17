@@ -39,7 +39,7 @@ Albums included:
 
 The first thing I looked at was how many words each album contains in total, and how many of those words are unique — a proxy for vocabulary richness.
 
-**Reputation** has the highest mean word count per track, making it her most lyrically dense album on average. On the other end, **The Life of a Showgirl** has the highest mean *unique* word count per track, suggesting more varied vocabulary relative to its size. (Shocking..)
+**Reputation** has the highest mean word count per track, making it her most lyrically dense album on average. On the other end, **The Life of a Showgirl** has the highest mean *unique* word count per track, suggesting more varied vocabulary relative to its size. (Shocking...)
 
 ![Album word count — unique vs non-unique words, sorted by words per track](https://github.com/natwonglakhon/Taylor_Swift_Lyrics/blob/bfcf29fe7e57218fb3bcc0726c860790b7693df5/images/Total_words_per_album.png?raw=true)
 
@@ -54,7 +54,7 @@ Tracing word count chronologically from 2006 to 2025, there is a general growth 
 
 ### Signature Words per Album (TF-IDF)
 
-To find the most characteristic words for each album (words that are common within that album but rare across others), I used TF-IDF (Term Frequency–Inverse Document Frequency). See more in my Jupyter notebook for definition and explanation.
+To find the most characteristic words for each album (words that are common within that album but rare across others), I used TF-IDF (Term Frequency–Inverse Document Frequency). See more in my Jupyter notebook for definition and explanation. Note that, in this analysis, I filtered out short words by keeping the length of $\ge 7$ letters. The reason for choosing such word length is to filter out most frequently used terms like pronouns for more meaningful analysis.
 
 Some standout results:
 
@@ -103,8 +103,6 @@ The distribution of word counts per song is right-skewed where most songs sit in
 
 ### The Longest Words
 
-Filtering for words of length $\ge 7$ and removing duplicates per song, the longest word in her entire discography is:
-
 > **"Miscommunications"** — 17 letters
 
 It appears in two songs: *"Story of Us"* from Speak Now and *"Question...?"* from Midnights.
@@ -113,9 +111,9 @@ The second longest is **"Sanctimoniously"** (15 letters), from *"But Daddy I Lov
 
 ![Top 20 longest words across all songs](https://github.com/natwonglakhon/Taylor_Swift_Lyrics/blob/824774910d19c4fb12c42e2059f67ee7ccbc01c7/images/top_longest_words.png?raw=true)
 
-### Most Used Words (Length ≥ 7)
+### Most Used Words (Length $\ge 7$)
 
-The most frequently used *noun* word with seven or more letters across all 251 songs is **"Forever"**, appearing 10 times in *"Elizabeth Taylor"* from The Life of a Showgirl alone.
+The most frequently used *noun* word with seven or more letters across all 251 songs is **"Forever"**, appearing 10 times in *"Elizabeth Taylor"* from The Life of a Showgirl alone. Again, the reason for choosing such word length is to filter out most frequently used terms like pronouns.
 
 **"Daylight"** is the most repetitive long word within a single song, appearing 38 times in *"Daylight"* from Lover.
 
@@ -155,8 +153,12 @@ Across 251 songs and 20 years of releases, some patterns emerge clearly:
 
 A few caveats worth noting. First, words with different tenses are treated as distinct, e.g., "remember" and "remembered" count separately, which inflates vocabulary counts slightly. Second, songs commonly associated with Taylor Swift that she did not perform (such as *"This Is What You Came For"*) are not included. Third, because Taylor's Version releases are used where available, some original lyrics differ, e.g., the original *"Better Than Revenge"* contains lyrics not present in this dataset, which was a deliberate choice.
 
+### Future works
+
+It is worth seeing the velocity of words (word per minute) by incoperating words with song lengths. Also, I want to see her lyrics comparing to other artists and explore what could be her *signature* in song writting.
+
 ---
 
-*Analysis conducted in Python using `pandas`, `scikit-learn`, `nltk`, `seaborn`, and `matplotlib`. Lyrics retrieved via the Genius API using `lyricsgenius`.*
+*Analysis conducted in Python using `pandas`, `scikit-learn`, `seaborn`, and `matplotlib`. Lyrics retrieved via the Genius API using `lyricsgenius`.*
 
 *Full code and data: [github.com/natwonglakhon/Taylor_Swift_Lyrics](https://github.com/natwonglakhon/Taylor_Swift_Lyrics)*
