@@ -137,6 +137,8 @@ Using *TF-IDF vectors* and *cosine similarity*, I computed a pairwise similarity
 
 ![Top 20 most lyrically similar song pairs](https://github.com/natwonglakhon/Taylor_Swift_Lyrics/blob/430250fb615ad731350fb1527590f50d1f9f5b57/images/Top_similar_songs.png?raw=true)
 
+The high similarity between the two "All Too Well" versions acts as a sanity check, confirming the cosine similarity approach captures genuine lyrical overlap rather than noise. Other methods are open for suggestion to see if it could offer a useful point of comparison, particularly for capturing semantic rather than purely lexical similarity.
+
 ---
 
 ## IV. Conclusion
