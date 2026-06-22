@@ -55,6 +55,9 @@ beyond what is already collected, and meaningfully reduces the estimation error 
 realisations. It is a straightforward example of feature engineering: extracting more 
 signal from the same data.
 
+![Simulation results](https://github.com/natwonglakhon/High-order-quantum-trajectory-simulation/blob/Simulation.png?raw=true)
+
+
 ## Results
 
 Across 5,000 Monte Carlo realisations over a unit time horizon, the ranking by 
@@ -67,6 +70,7 @@ The histogram of per-realisation errors shows that the improvement from Robinet 
 is not just a shift in the mean; the $\Phi$ map also reduces the tail of large-error 
 realisations, which matters in any application where worst-case accuracy is the 
 binding constraint.
+![Histogram results](https://github.com/natwonglakhon/High-order-quantum-trajectory-simulation/blob/Histograms.png?raw=true)
 
 ## Where this applies
 
