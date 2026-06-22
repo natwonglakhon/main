@@ -1,10 +1,20 @@
 # Housing Price Prediction Modelling
 
-In this analysis, I investigate machine learning models to predict housing prices based on existing features and aggregated features. The models include Linear Regression (LR), Random Forest Regression (RF), and XGBoost.
+In this analysis, I investigate machine learning models for estimating residential property values in California using demographic and geographic information. Accurate price estimation is valuable for real estate platforms, financial institutions, and property investors, where automated valuations support pricing decisions, mortgage assessments, and market analysis.
+
+Three models are compared: Linear Regression (LR), Random Forest (RF), and XGBoost. The analysis begins with data cleaning and preparation before evaluating each model through prediction accuracy and residual analysis. Finally, new geographical and structural features are engineered to examine whether domain knowledge can improve predictive performance.
 
 The analysis begins with loading and cleaning the data. Once ready, the data is split into train and test sets. The data is then scaled for the LR model, while RF and XGBoost use the original unscaled data. All three models are evaluated by the $R^2$ score, and their errors are examined through residual analysis. To enhance the models further, new features are aggregated from the existing ones, and all three models are retrained and re-evaluated.
 
 ## [Click here for Repository](https://github.com/natwonglakhon/House_price_modelling)
+
+
+## Business Objective
+
+A real estate valuation model should both produce accurate predictions and provide consistent estimates across different regions and property types. Large prediction errors can lead to overpriced listings, undervalued assets, or inaccurate lending decisions.
+
+The **objective** of this project is therefore to identify a model that balances predictive accuracy, robustness, and interpretability while investigating which property characteristics contribute most to house prices.
+
 
 ---
 
@@ -30,7 +40,7 @@ The data is split 70% training and 30% testing using `train_test_split` with `ra
 
 ---
 
-## II. Modelling from Existing Features
+## II. Baseline Property Valuation Models
 
 ### IIA. Linear Regression
 
@@ -62,13 +72,15 @@ Feature importance tells us which features reduce prediction error the most (mea
 
 ![Feature Importance](https://github.com/natwonglakhon/House_price_modelling/blob/main/images/feature_importance.png?raw=true)
 
-Median income is by far the strongest predictor at 44%, followed by location features. It is worth noting that binary features like `ocean_proximity` may have biased importance scores, since they only take values 0 or 1 and therefore have fewer possible split thresholds.
+Median income is by far the strongest predictor at 44%, followed by location features. It is worth noting that binary features like `ocean_proximity` may have biased importance scores, since they only take values 0 or 1 and therefore have fewer possible split thresholds. This result aligns with expectations from the housing market. Areas with higher household incomes generally support higher purchasing power, which is reflected in property values. For organisations using automated valuation models, this finding highlights income-related demographics as one of the most informative signals when estimating prices.
 
 ### IIC. XGBoost
 
 The third model is XGBoost. Instead of building independent trees in parallel like Random Forest, XGBoost builds trees sequentially, with each new tree correcting the errors of the previous ones, gradually minimising the price error. Given this, it is more powerful than the RF model, at the cost of being more computationally expensive.
 
 With `n_estimators=500`, `max_depth=6`, and `learning_rate=0.05`, the model achieves an $R^2$ of **0.802**, improving on both linear regression and Random Forest.
+
+From a business perspective, this improvement translates into more reliable automated property valuations. A model with smaller prediction errors reduces the risk of systematically overpricing or underpricing properties, making it more suitable for supporting valuation decisions than the simpler Linear Regression baseline.
 
 ![Test vs XGBoost Prediction](https://github.com/natwonglakhon/House_price_modelling/blob/main/images/xgb_predicted_vs_actual.png?raw=true)
 
@@ -100,11 +112,13 @@ Plotting the absolute prediction errors on a map reveals a clear geographic patt
 
 ![Error Map](https://github.com/natwonglakhon/House_price_modelling/blob/main/images/error_map.png?raw=true)
 
-This makes intuitive sense. Urban and coastal markets are more volatile and harder to predict from census block features alone. Latitude and longitude are in the model, but they do not carry explicit information about distance to a city centre or distance to the coast. This finding directly motivates the feature engineering in the next section.
+This makes intuitive sense. Urban and coastal markets are more volatile and harder to predict from census block features alone. Latitude and longitude are in the model, but they do not carry explicit information about distance to a city centre or distance to the coast. This finding directly motivates the feature engineering in the next section. 
+
+From a practical perspective, these are precisely the regions where valuation accuracy is most important because they contain many high-value properties and more active markets. This suggests that additional location-specific features or external datasets could provide the greatest improvement in future iterations of the model.
 
 ---
 
-## IV. Modelling with Aggregated Features
+## IV. Improving Valuation Through Feature Engineering
 
 Based on the residual analysis, several new features are engineered to give the models better spatial and structural information.
 
@@ -149,6 +163,17 @@ XGBoost with the aggregated features achieves an $R^2$ of **0.820**, the **best 
 
 An interesting pattern emerges: all models' mean residuals increased in magnitude despite improvements in $R^2$. However, all standard deviations decreased. This reflects a trade-off: the aggregated features make models more reliable on average (smaller spread of errors) while slightly shifting the mean. XGBoost retains the best overall profile with the smallest mean residual (-\\$527) and the tightest standard deviation (\\$41,244).
 
+#### Practical Implications
+
+The final XGBoost model achieves an $R^2$ of 82.0%, making it the strongest candidate for an automated valuation system. The feature engineering results demonstrate that incorporating domain knowledge can provide meaningful gains beyond simply increasing model complexity.
+
+While this model is not intended to replace professional appraisals, it could serve as a first-pass valuation tool for:
+
+ - estimating listing prices on real estate platforms,
+ - supporting mortgage pre-assessments,
+ - identifying potentially underpriced properties for investment analysis,
+ - providing rapid price estimates for large property portfolios.
+
 ---
 
 ## V. Conclusion and Discussion
@@ -161,4 +186,4 @@ Residual analysis revealed that all three models produce residuals centred aroun
 
 Looking inside the models via feature importance, median income remains the strongest single predictor by a significant margin, while geographical features collectively play a crucial supporting role. This is intuitive: neighbourhood and proximity to economic centres strongly shape property values.
 
-One important trade-off emerged from the residual analysis. Although adding aggregated features improved $R^2$ (i.e., reduced the standard deviation of errors), the mean errors increased slightly across all models. **This reflects a trade-off between bias and variance: a model can be more reliable on average while being slightly less accurate in expectation.** Which side of this trade-off to favour is ultimately a business decision, depending on whether minimising the worst-case errors or minimising average prediction error matters more for the use case.
+One important trade-off emerged from the residual analysis. Although adding aggregated features improved $R^2$ (i.e., reduced the standard deviation of errors), the mean errors increased slightly across all models. **This reflects a trade-off between bias and variance: a model can be more reliable on average while being slightly less accurate in expectation.** Which side of this trade-off to favour is ultimately a business decision. For example, a bank assessing mortgage applications may prioritise reducing worst-case valuation errors to manage financial risk, while a real estate platform may prefer a model with lower average error to improve overall pricing consistency across thousands of listings. Evaluating machine learning models therefore requires considering both predictive performance and the operational context in which the model will be deployed.
