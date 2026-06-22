@@ -163,7 +163,7 @@ XGBoost with the aggregated features achieves an $R^2$ of **0.820**, the **best 
 
 An interesting pattern emerges: all models' mean residuals increased in magnitude despite improvements in $R^2$. However, all standard deviations decreased. This reflects a trade-off: the aggregated features make models more reliable on average (smaller spread of errors) while slightly shifting the mean. XGBoost retains the best overall profile with the smallest mean residual (-\\$527) and the tightest standard deviation (\\$41,244).
 
-#### Practical Implications
+## V. Practical Implications
 
 The final XGBoost model achieves an $R^2$ of 82.0%, making it the strongest candidate for an automated valuation system. The feature engineering results demonstrate that incorporating domain knowledge can provide meaningful gains beyond simply increasing model complexity.
 
@@ -176,7 +176,7 @@ While this model is not intended to replace professional appraisals, it could se
 
 ---
 
-## V. Conclusion and Discussion
+## VI. Conclusion and Discussion
 
 In this analysis, three models were built and compared: Linear Regression, Random Forest, and XGBoost, to predict median house prices in California. The data was first cleaned by filtering out extreme values near the $500,000 cap, a known artefact in this dataset, and filling missing values in `total_bedrooms` with the column median.
 
