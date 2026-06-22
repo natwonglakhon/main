@@ -27,10 +27,10 @@ Five update maps of increasing complexity were implemented and benchmarked:
 | Method | Order | Description |
 |---|---|---|
 | Itô map | 1st | Linear update, fastest to compute |
-| Rouchon-Ralph map | 2nd | Quadratic correction |
-| WWC map | Higher | Wiener series expansion |
+| Rouchon-Ralph map | 2nd (partial) | Quadratic correction |
+| WWC map | 2nd (full) | Wiener series expansion |
 | Robinet map | 3rd | Full cubic expansion |
-| Nearly exact map (Φ) | Reference | High-accuracy benchmark |
+| Nearly exact map ($\Phi$) | Reference | High-accuracy benchmark |
 
 Error is measured as the average *trace distance* between each method's state estimate and 
 the true hidden state across 5,000 independent realisations.
@@ -42,13 +42,13 @@ structure within the window. The $\Phi$-map uses an additional summary statistic
 the raw measurement stream: a time-weighted integral that captures how the signal evolved 
 within the interval, not just its average level.
 
-Concretely, if $y_{t_i}$ is the raw measurement record, the standard approach uses:
+Concretely, if $y_{t}$ is the raw measurement record, the standard approach uses:
 
-> $Y_t = (1/N) \sum y_{t_i}$
+> $I_t \propto (1/N) \sum y_{t}$
 
 The $\Phi$-map additionally computes:
 
-> $Z_{t_i} = \sum y_{t_i}(t_i - T/2) · dt$
+> $\phi{t} \propto \sum y_{t}(t - T/2) · dt$
 
 This second statistic is cheap to compute, requires no access to higher-frequency data 
 beyond what is already collected, and meaningfully reduces the estimation error across all 
@@ -56,6 +56,8 @@ realisations. It is a straightforward example of feature engineering: extracting
 signal from the same data.
 
 ![Simulation results](https://github.com/natwonglakhon/High-order-quantum-trajectory-simulation/blob/57f9d80ac22f93108bc70391c0462bf3a75d47d0/Simulation.png?raw=true)
+Here, inset plots are the raw records (left) and $I_t$ and $\phi_t$ are the aggregated records (right).
+
 
 ## Results
 
@@ -69,7 +71,9 @@ The histogram of per-realisation errors shows that the improvement from Robinet 
 is not just a shift in the mean; the $\Phi$ map also reduces the tail of large-error 
 realisations, which matters in any application where worst-case accuracy is the 
 binding constraint.
+
 ![Histogram results](https://github.com/natwonglakhon/High-order-quantum-trajectory-simulation/blob/57f9d80ac22f93108bc70391c0462bf3a75d47d0/Histograms.png?raw=true)
+The pale-yellow background is the highligh of the key resutls where the $\Phi$-map outperforms the others by an order of magnitude of $\Delta t = 0.01$.
 
 ## Where this applies
 
