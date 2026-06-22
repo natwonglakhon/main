@@ -14,7 +14,7 @@ The data is retrieved from [Kaggle](https://www.kaggle.com/datasets/nalisha/cali
 
 The first thing to check is the distribution of the target variable. The mean (\\$206,856) is noticeably higher than the median (\\$179,700), indicating a right-skewed distribution with a large spike near \\$500,000. This spike is a known artefact of how the dataset was collected: prices were top-coded at \\$500,001, meaning any house worth more than that was simply recorded as $500,001. This creates an artificial cluster that would bias model training and cause divergence in gradient-based optimisers like SGDRegressor. The data is therefore filtered to keep only values up to the 95th percentile.
 
-![Price Distribution](https://github.com/natwonglakhon/House_price_modellingblob/main/images/median_house_value_distribution.png?raw=true)
+![Price Distribution](https://github.com/natwonglakhon/House_price_modelling/blob/main/images/median_house_value_distribution.png?raw=true)
 
 There are also 200 missing values in the `total_bedrooms` column. These are filled with the column median, which is a reasonable choice since median is robust to the skewed distribution of room counts.
 
