@@ -55,7 +55,7 @@ beyond what is already collected, and meaningfully reduces the estimation error 
 realisations. It is a straightforward example of feature engineering: extracting more 
 signal from the same data.
 
-![Simulation results](https://github.com/natwonglakhon/High-order-quantum-trajectory-simulation/blob/57f9d80ac22f93108bc70391c0462bf3a75d47d0/Simulation.png)
+![Simulation results](https://github.com/natwonglakhon/High-order-quantum-trajectory-simulation/blob/57f9d80ac22f93108bc70391c0462bf3a75d47d0/Simulation.png?raw=true)
 
 ## Results
 
