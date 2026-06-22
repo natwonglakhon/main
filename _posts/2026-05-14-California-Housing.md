@@ -42,7 +42,7 @@ Looking at the model coefficients, `median_income` carries the highest weight (5
 
 The predicted vs actual plot shows that the model handles lower prices reasonably well, but deviates more at higher price ranges, consistent with the non-linear ceiling.
 
-![Test vs LR Prediction](https://github.com/natwonglakhon/House_price_modelling/blob/main/images/sgd_predicted_vs_actual?raw=true)
+![Test vs LR Prediction](https://github.com/natwonglakhon/House_price_modelling/blob/main/images/sgd_predicted_vs_actual.png?raw=true)
 
 ### IIB. Random Forest
 
