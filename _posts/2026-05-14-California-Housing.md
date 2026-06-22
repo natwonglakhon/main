@@ -42,7 +42,7 @@ Looking at the model coefficients, `median_income` carries the highest weight (5
 
 The predicted vs actual plot shows that the model handles lower prices reasonably well, but deviates more at higher price ranges, consistent with the non-linear ceiling.
 
-![Test vs LR Prediction](https://github.com/natwonglakhon/House_price_modelling/blob/main/images/Test_vs_model.png?raw=true)
+![Test vs LR Prediction](https://github.com/natwonglakhon/House_price_modelling/blob/main/images/sgd_predicted_vs_actual?raw=true)
 
 ### IIB. Random Forest
 
@@ -54,7 +54,7 @@ A baseline model with 200 trees achieves an $R^2$ of **0.783**.
 
 The model is then tuned using `RandomizedSearchCV` with 5-fold cross-validation, searching over the number of trees, maximum depth, and minimum samples split. Rather than trying every possible combination (which is what `GridSearchCV` does), `RandomizedSearchCV` samples a fixed number of random combinations and finds a good configuration much faster. The best parameters found are `n_estimators=500`, `max_depth=30`, and `min_samples_split=2`, giving a test $R^2$ of **0.784**, only marginally better than the baseline.
 
-![Test vs RF Prediction](https://github.com/natwonglakhon/House_price_modelling/blob/main/images/Test_vs_model_rf.png?raw=true)
+![Test vs RF Prediction](https://github.com/natwonglakhon/House_price_modelling/blob/main/images/RF_predicted_vs_actual.png?raw=true)
 
 #### Feature Importance
 
@@ -69,6 +69,8 @@ Median income is by far the strongest predictor at 44%, followed by location fea
 The third model is XGBoost. Instead of building independent trees in parallel like Random Forest, XGBoost builds trees sequentially, with each new tree correcting the errors of the previous ones, gradually minimising the price error. Given this, it is more powerful than the RF model, at the cost of being more computationally expensive.
 
 With `n_estimators=500`, `max_depth=6`, and `learning_rate=0.05`, the model achieves an $R^2$ of **0.802**, improving on both linear regression and Random Forest.
+
+![Test vs XGBoost Prediction](https://github.com/natwonglakhon/House_price_modelling/blob/main/images/xgb_predicted_vs_actual.png?raw=true)
 
 Interestingly, the feature importance here differs from what Random Forest found. `ocean_proximity_INLAND` emerges as the chief contributor (0.573), overtaking `median_income` (0.171). This suggests XGBoost is uncovering a different view of the data's structure, capturing the price penalty for being inland more explicitly than Random Forest did through its averaged splits.
 
@@ -125,26 +127,15 @@ The tuned Random Forest improves to **0.791** with the aggregated features.
 
 The updated feature importance now tells a richer story:
 
-| Feature | Importance |
-|---------|-----------|
-| median_income | 0.345 |
-| dist_coast_km | 0.266 |
-| population_per_household | 0.108 |
-| latitude | 0.041 |
-| longitude | 0.033 |
-| dist_sf | 0.032 |
-| housing_median_age | 0.030 |
-| dist_la | 0.023 |
-| rooms_per_household | 0.021 |
-| bedrooms_per_room | 0.020 |
-| income_x_density | 0.020 |
-| dist_sd | 0.018 |
+![Feature Importance Random Forest (Aggreated)](https://github.com/natwonglakhon/House_price_modelling/blob/main/images/feature_importance_agg.png?raw=true)
 
 Distance to the coastline jumps to second place at 26.6%, confirming that coastal proximity is a genuinely strong signal for house prices that the raw `ocean_proximity` categories were not fully capturing.
 
 ### IVC. XGBoost
 
 XGBoost with the aggregated features achieves an $R^2$ of **0.820**, the **best result** in this analysis. The distance to coastline again ranks second in importance (0.261), reinforcing how much geographic distance contributes to predictive power beyond what raw coordinates provide.
+![Feature Importance XGBoost (Aggreated)](https://github.com/natwonglakhon/House_price_modelling/blob/main/images/feature_importance_xgb_agg.png?raw=true)
+
 
 ### IVD. Residual Analysis (Aggregated Features)
 
@@ -156,7 +147,7 @@ XGBoost with the aggregated features achieves an $R^2$ of **0.820**, the **best 
 | Tuned Random Forest | -$868 | $44,365 |
 | XGBoost | -$527 | $41,244 |
 
-An interesting pattern emerges: all models' mean residuals increased in magnitude despite improvements in $R^2$. However, all standard deviations decreased. This reflects a trade-off: the aggregated features make models more reliable on average (smaller spread of errors) while slightly shifting the mean. XGBoost retains the best overall profile with the smallest mean residual (-$527) and the tightest standard deviation ($41,244).
+An interesting pattern emerges: all models' mean residuals increased in magnitude despite improvements in $R^2$. However, all standard deviations decreased. This reflects a trade-off: the aggregated features make models more reliable on average (smaller spread of errors) while slightly shifting the mean. XGBoost retains the best overall profile with the smallest mean residual (-\\$527) and the tightest standard deviation (\\$41,244).
 
 ---
 
