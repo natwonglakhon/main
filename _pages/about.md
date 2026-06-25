@@ -8,11 +8,11 @@ redirect_from:
   - /about.html
 ---
 
-Good day everyone. I'm a PhD physicist from Griffith University, Australia.
+Good day everyone. I'm a PhD physicist and a *trained* data scientist.
 
 Grew up in Thailand and now in The Land Down Under
 ======
-I was born and grew up in Sakon Nakhon of Isan. I moved to Bangkok in 2016 to pursue my undergraduate at The Department of Physics, Faculty of Science, Mahidol University. I am currently doing my PhD at Grifftih University. My PhD projects are "Extracting information and controlling quantum systems" where my supervisors are [Dr. Gerardo Paz Silva](https://experts.griffith.edu.au/8207-gerardo-paz-silva) and [Prof. Howard M. Wiseman](https://howardwiseman.me). We are particularly focusing on quantum noise spectroscopy and control. 
+I was born and grew up in Sakon Nakhon of Isan. I moved to Bangkok in 2016 to pursue my undergraduate at The Department of Physics, Faculty of Science, Mahidol University. I compledted my PhD in theoretical physics (Quantum information) from [Grifftih University](https://www.griffith.edu.au/). My PhD thesis is "Extracting information and controlling quantum systems", where I work under supervisons of [Dr. Gerardo Paz Silva](https://experts.griffith.edu.au/8207-gerardo-paz-silva) and [Prof. Howard M. Wiseman](https://howardwiseman.me). We particularly focused on *quantum noise* and control, and continuous quantum measurement.
 
 PhD research
 ======
@@ -27,5 +27,6 @@ For the second project of my PhD, I investigated controlled quantum systems subj
 
 Modelling and Machine Learning projects
 ======
+* [All you need to know about all Tyalor Swift's lyrics.](https://natwonglakhon.github.io/main/taylor-swift-lyrics-analysis/)
+* [Housing price model predictions.](https://natwonglakhon.github.io/main/California-Housing/)
 * [Quantum trajectory simulations: stochastic modelling.](https://natwonglakhon.github.io/main/Quantum-Trajectories/)
-* [California Housing models: Linear Regression and Random Forest.](https://natwonglakhon.github.io/main/California-Housing/)
