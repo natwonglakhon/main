@@ -12,7 +12,7 @@ Good day everyone. I'm a PhD physicist and a *trained* data scientist.
 
 Grew up in Thailand and now in The Land Down Under
 ======
-I was born and grew up in Sakon Nakhon of Isan. I moved to Bangkok in 2016 to pursue my undergraduate at The Department of Physics, Faculty of Science, Mahidol University. I compledted my PhD in theoretical physics (Quantum information) from [Grifftih University](https://www.griffith.edu.au/). My PhD thesis is "Extracting information and controlling quantum systems", where I work under supervisons of [Dr. Gerardo Paz Silva](https://experts.griffith.edu.au/8207-gerardo-paz-silva) and [Prof. Howard M. Wiseman](https://howardwiseman.me). We particularly focused on *quantum noise* and control, and continuous quantum measurement.
+I was born and grew up in Sakon Nakhon of Isan. I moved to Bangkok in 2016 to pursue my undergraduate at The Department of Physics, Faculty of Science, Mahidol University. I completed my PhD in theoretical physics (Quantum information) from [Grifftih University](https://www.griffith.edu.au/). My PhD thesis is "Extracting information and controlling quantum systems", where I work under supervisons of [Dr. Gerardo Paz Silva](https://experts.griffith.edu.au/8207-gerardo-paz-silva) and [Prof. Howard M. Wiseman](https://howardwiseman.me). We particularly focused on *quantum noise* and control, and continuous quantum measurement.
 
 PhD research
 ======
