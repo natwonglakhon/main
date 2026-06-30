@@ -53,6 +53,8 @@ Looking at the model coefficients, `median_income` carries the highest weight (5
 The predicted vs actual plot shows that the model handles lower prices reasonably well, but deviates more at higher price ranges, consistent with the non-linear ceiling.
 
 ![Test vs LR Prediction](https://github.com/natwonglakhon/House_price_modelling/blob/main/images/sgd_predicted_vs_actual.png?raw=true)
+Notice that, the model can handle well for small price while some deviations from the higher price from the linear curve. Note that the shaded area represents 94.8% of data, where the standard deviation of the residules is $61136.4. We shall see the residule analysis in later section.
+
 
 ### IIB. Random Forest
 
@@ -65,6 +67,7 @@ A baseline model with 200 trees achieves an $R^2$ of **0.783**.
 The model is then tuned using `RandomizedSearchCV` with 5-fold cross-validation, searching over the number of trees, maximum depth, and minimum samples split. Rather than trying every possible combination (which is what `GridSearchCV` does), `RandomizedSearchCV` samples a fixed number of random combinations and finds a good configuration much faster. The best parameters found are `n_estimators=500`, `max_depth=30`, and `min_samples_split=2`, giving a test $R^2$ of **0.784**, only marginally better than the baseline.
 
 ![Test vs RF Prediction](https://github.com/natwonglakhon/House_price_modelling/blob/main/images/RF_predicted_vs_actual.png?raw=true)
+Clearly, the $R^2$ score is much improved compared to the linear regression model. However, some outliers are seen in extreme small and high prices. The shaded area represents 94.3% of data, where the standard deviation of the residules is now smaller than the LR model with $45239.8.
 
 #### Feature Importance
 
@@ -83,8 +86,10 @@ With `n_estimators=500`, `max_depth=6`, and `learning_rate=0.05`, the model achi
 From a business perspective, this improvement translates into more reliable automated property valuations. A model with smaller prediction errors reduces the risk of systematically overpricing or underpricing properties, making it more suitable for supporting valuation decisions than the simpler Linear Regression baseline.
 
 ![Test vs XGBoost Prediction](https://github.com/natwonglakhon/House_price_modelling/blob/main/images/xgb_predicted_vs_actual.png?raw=true)
+The $R^2$ score is now reached 80%, improving from the RF model. Aslo the shaded area represents 94.4% of data, where the standard deviation of the residules is now improved to than the LR model with $43276.9.
 
 Interestingly, the feature importance here differs from what Random Forest found. `ocean_proximity_INLAND` emerges as the chief contributor (0.573), overtaking `median_income` (0.171). This suggests XGBoost is uncovering a different view of the data's structure, capturing the price penalty for being inland more explicitly than Random Forest did through its averaged splits.
+![Feature Importance](https://github.com/natwonglakhon/House_price_modelling/blob/main/images/feature_importance_xgboost.png?raw=true)
 
 ---
 
@@ -102,9 +107,9 @@ The residual distributions are centred around zero with a roughly normal shape, 
 
 | Model | Mean Residual | Std of Residuals |
 |-------|--------------|-----------------|
-| Linear Regression | -$920 | $61,136 |
-| Tuned Random Forest | -$712 | $45,114 |
-| XGBoost | -$178 | $43,235 |
+| Linear Regression | -$920 | $61,131 |
+| Tuned Random Forest | -$712 | $45,110 |
+| XGBoost | -$217 | $43,235 |
 
 #### Errors by Geography
 
@@ -157,11 +162,11 @@ XGBoost with the aggregated features achieves an $R^2$ of **0.820**, the **best 
 
 | Model | Mean Residual | Std of Residuals |
 |-------|--------------|-----------------|
-| Linear Regression | +$713 | $61,143 |
-| Tuned Random Forest | -$868 | $44,365 |
-| XGBoost | -$527 | $41,244 |
+| Linear Regression | +$222 | $61,092 |
+| Tuned Random Forest | -$968 | $44,361 |
+| XGBoost | -$334 | $41,368 |
 
-An interesting pattern emerges: all models' mean residuals increased in magnitude despite improvements in $R^2$. However, all standard deviations decreased. This reflects a trade-off: the aggregated features make models more reliable on average (smaller spread of errors) while slightly shifting the mean. XGBoost retains the best overall profile with the smallest mean residual (-\\$527) and the tightest standard deviation (\\$41,244).
+An interesting pattern emerges: all models' mean residuals increased in magnitude despite improvements in $R^2$. However, all standard deviations decreased. This reflects a trade-off: the aggregated features make models more reliable on average (smaller spread of errors) while slightly shifting the mean. XGBoost retains the best overall profile with the smallest mean residual (-\\$334) and the tightest standard deviation (\\$41,368).
 
 ## V. Practical Implications
 
@@ -186,4 +191,4 @@ Residual analysis revealed that all three models produce residuals centred aroun
 
 Looking inside the models via feature importance, median income remains the strongest single predictor by a significant margin, while geographical features collectively play a crucial supporting role. This is intuitive: neighbourhood and proximity to economic centres strongly shape property values.
 
-One important trade-off emerged from the residual analysis. Although adding aggregated features improved $R^2$ (i.e., reduced the standard deviation of errors), the mean errors increased slightly across all models. **This reflects a trade-off between bias and variance: a model can be more reliable on average (small mean error) while being slightly more uncertainty (big variance).** Which side of this trade-off to favour is ultimately a business decision. For example, a bank assessing mortgage applications may prioritise reducing worst-case valuation errors to manage financial risk, while a real estate platform may prefer a model with lower average error to improve overall pricing consistency across thousands of listings. Evaluating machine learning models therefore requires considering both predictive performance and the operational context in which the model will be deployed.
+One important trade-off emerged from the residual analysis. Although adding aggregated features improved $R^2$ (i.e., reduced the standard deviation of errors), the mean errors increased slightly across all models. **This reflects a trade-off between bias and variance: a model can be more reliable on average (small mean error) while being slightly more uncertainty (big variance).** Which side of this trade-off to favour is ultimately a business decision. As seen in the analysis, the XGBoost model with engineered features produces a mean error of -\\$333.8, slightly higher in magnitude than the -\\$216.8 mean error without engineered features, but yields a lower standard deviation of \\$41,368.3, roughly \\$2,000 lower than the model without aggregation. For example, a bank assessing mortgage applications may prioritise reducing worst-case valuation errors to manage financial risk, while a real estate platform may prefer a model with lower average error to improve overall pricing consistency across thousands of listings. Evaluating machine learning models therefore requires considering both predictive performance and the operational context in which the model will be deployed.
