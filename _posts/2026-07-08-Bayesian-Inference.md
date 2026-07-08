@@ -8,7 +8,11 @@ where $y_t$ is the target values, $\vec X_t = (x_1, \dots, x_n)$ is the observed
 
 There are two assumptions made in this model:
  * $\epsilon \sim \mathcal{N}(0, \sigma)$. Meaning $\epsilon$ fluctuates *normally* around zero with the variance $\sigma^2$. I'd like to think it is a bias of the model. (Of course, a good model should have zero bias.)
- * $\vec \beta_t \sim \mathcal{N}(\vec\mu_t, \hat\Sigma_t)$. Meaning $\vec \beta_t$ is a normal random vector with $\vec \mu_t = (\mu_1, \dots, \mu_n)$ mean and $\hat \Sigma_t^2$ covariance matrix with $\hat \Sigma_t = \begin{pmatrix} \Sigma_{11}& \dots & \Sigma_{1n}\\ \Sigma_{\dots 1} &\dots&\Sigma_{\dots n}\\ \Sigma_{1n}&\dots&\Sigma_{nn} \end{pmatrix}$.
+ * $\vec \beta_t \sim \mathcal{N}(\vec\mu_t, \hat\Sigma_t)$. Meaning $\vec \beta_t$ is a normal random vector with $\vec \mu_t = (\mu_1, \dots, \mu_n)$ mean and $\hat \Sigma_t^2$ covariance matrix with $$\hat \Sigma_t = \begin{pmatrix} 
+\Sigma_{11} & \dots & \Sigma_{1n}\\ 
+\vdots & \ddots & \vdots\\ 
+\Sigma_{n1} & \dots & \Sigma_{nn} 
+\end{pmatrix}.$$
 
 **The question is how do we update** $\vec \beta_t$?
 
