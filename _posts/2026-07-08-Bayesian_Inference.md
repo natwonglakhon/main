@@ -22,25 +22,25 @@ where I have ignored the normalisation by leaving it with the proportional sign.
 
 As $\epsilon$ has zero mean and $\sigma^2$ variance, it follows that $y_t\|\vec X_t, \vec\beta_t$ has a mean of $\vec X_t^\top \cdot \vec\beta_t$ with $\sigma^2$ variance. Thus, we shall write:
 
-$$p(y_t\|\vec\beta_t) \propto \exp\left[-\frac{1}{2}(y_t- \vec X_t^\top \cdot \vec\beta_t)^\top(y_t- \vec X_t^\top \cdot \vec\beta_t)/\sigma^2\right].$$
+$$p(y_t \mid \vec\beta_t) \propto \exp\left[-\frac{1}{2}(y_t- \vec X_t^\top \cdot \vec\beta_t)^\top(y_t- \vec X_t^\top \cdot \vec\beta_t)/\sigma^2\right].$$
 
 **The posterior**: Now, we ask what is the probability of $\vec\beta_t$ given the target $y_t$?
 
 To answer that, we use Bayes' rule. Bayes' rule states that $p(\vec\beta_t\|y_t) \propto p(y_t\|\vec\beta_t)p(\vec\beta_t)$. Therefore, we can use the expression above, giving:
 
-$$p(\vec\beta_t\|y_t) \propto \exp\left[-\frac{1}{2}(y_t- \vec X_t^\top \cdot \vec\beta_t)^\top(y_t- \vec X_t^\top \cdot \vec\beta_t)/\sigma^2 - \frac{1}{2}(\vec\beta_t - \vec\mu_t)^\top \vec \Sigma_t^{-1}(\vec \beta_t-\vec\mu_t)\right].$$
+$$p(\vec\beta_t \mid y_t) \propto \exp\left[-\frac{1}{2}(y_t- \vec X_t^\top \cdot \vec\beta_t)^\top(y_t- \vec X_t^\top \cdot \vec\beta_t)/\sigma^2 - \frac{1}{2}(\vec\beta_t - \vec\mu_t)^\top \vec \Sigma_t^{-1}(\vec \beta_t-\vec\mu_t)\right].$$
 
 Note that it is just an exponential of a scalar so we can combine the argument together.
 
 We can rearrange the expression above in the following form:
 
-$$p(\vec\beta_t\|y_t) \propto \exp\left[-\frac{1}{2}(\vec\beta_t-\vec\mu_{t'})^\top \vec \Sigma_{t'} (\vec\beta_t-\vec\mu_{t'})\right],$$
+$$p(\vec\beta_t \mid y_t) \propto \exp\left[-\frac{1}{2}(\vec\beta_t-\vec\mu_{t'})^\top \vec \Sigma_{t'} (\vec\beta_t-\vec\mu_{t'})\right],$$
 
-where we again ignore the constant (unrelated to $\vec\beta_t$) and find that
+where we again ignore the constant (unrelated to $\vec\beta_t$). Note that the above expression can be achieve by using the symetric property of $\vec\Sigma_t^{-1}$. We find the updated mean and variance as
  * $\vec\Sigma_{t'} = (\vec\Sigma_t^{-1}+ \frac{\vec X_t^\top\vec X_t}{\sigma^2})^{-1}$ and
  * $\vec\mu_{t'}=\vec\Sigma_{t'}(\vec\Sigma_t^{-1}\vec\mu_t + \frac{\vec X_t^T y_t}{\sigma^2})$.
 
-The two expressions above give the recursive update for the parameter $\vec\beta_{t'}$.
+The two expressions above give the recursive update for the parameter $\vec\beta_{t'}$. The time incoming observed feature will be fed and the vector $\vec\beta$ will be updated recursively. 
 
 ## Implement the model using BayesianRidge
 From sklearn, BayesianRidge is available to use. However, BayesianRidge does *Empirical Bayes* which is slightly different from the theory. I will not go into details for now.
