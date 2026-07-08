@@ -41,8 +41,8 @@ We can rearrange the expression above in the following form:
 $$p(\vec\beta_t \mid y_t) \propto \exp\left[-\frac{1}{2}(\vec\beta_t-\vec\mu_{t'})^\top \vec \Sigma_{t'} (\vec\beta_t-\vec\mu_{t'})\right],$$
 
 where we again ignore the constant (unrelated to $\vec\beta_t$). Note that the above expression can be achieve by using the symetric property of $\hat\Sigma_t^{-1}$. We find the updated mean and variance as
- * $\vec\Sigma_{t'} = (\hat\Sigma_t^{-1}+ \frac{\vec X_t^\top\vec X_t}{\sigma^2})^{-1}$ and
- * $\vec\mu_{t'}=\vec\Sigma_{t'}(\hat\Sigma_t^{-1}\vec\mu_t + \frac{\vec X_t^T y_t}{\sigma^2})$.
+ * $\vec\Sigma_{t'} = (\hat\Sigma_t^{-1}+ \frac{\vec X_t^\top\cdot\vec X_t}{\sigma^2})^{-1}$ and
+ * $\vec\mu_{t'}=\vec\Sigma_{t'}(\hat\Sigma_t^{-1}\cdot\vec\mu_t + \frac{\vec X_t^T y_t}{\sigma^2})$.
 
 The two expressions above give the recursive update for the parameter $\vec\beta_{t'}$. The time incoming observed feature will be fed and the vector $\vec\beta$ will be updated recursively. 
 
