@@ -1,4 +1,4 @@
-# Queensland Electricity Demand Forecasting
+# Probabilistic Electricity Demand Forecasting for Queensland Using Machine Learning
 
 Electricity demand forecasting is one of the core problems in energy market operations. Grid operators need to know how much electricity will be consumed in the coming hours so they can dispatch the right amount of generation, keep the system stable, and avoid unnecessary costs. Getting it wrong in either direction is expensive: too little and you risk blackouts, too much and you're wasting money on generation that isn't needed.
 
@@ -24,7 +24,7 @@ The final merged dataset runs from August 2020 to June 2026 at 30-minute interva
 
 ## Part I: 1-Hour Ahead Forecast
 
-The goal here is: given demand right now, what will it be in the next hour?
+The goal here is: given data right now, what will it be in the next hour?
 
 ### Baseline formulation
 
@@ -45,7 +45,7 @@ The train/test split uses `shuffle=False` throughout this project to preserve ch
 
 ### Linear Regression (OLS)
 
-The baseline linear regression already does surprisingly well. Demand has very strong autocorrelation over short horizons, which means knowing what demand was doing a few minutes ago is already highly informative about what it will do next.
+The baseline linear regression already does surprisingly well. Demand has very strong *autocorrelation* over short horizons, which means knowing what demand was doing a few minutes ago is already highly informative about what it will do next.
 
 ![Linear Regression baseline: predicted vs actual](https://raw.githubusercontent.com/natwonglakhon/QLD_Electricity_Forecast/4b1e1199d92d196e9930ba2200905cb29bd8594e/images/LR_predicted_vs_actual.png)
 
@@ -59,9 +59,9 @@ I also fit a Bayesian linear regression using the baseline features. The Bayesia
 
 $$\hat{y}_{t+1} = \beta_1 D_t + \beta_2 D_{t-1} + \beta_3 D_{t-2} + \epsilon$$
 
-with $\epsilon \sim \mathcal{N}(0, \sigma)$ and $\vec{\beta} \sim \mathcal{N}(\mu_0, \Sigma_0)$.
+with $\epsilon \sim \mathcal{N}(0, \sigma)$ and $\vec{\beta} \sim \mathcal{N}(\mu_0, \Sigma_0)$. For technical people, I also add some derivations and how the model work here.
 
-The main advantage of the Bayesian approach is that it gives a posterior predictive distribution, not just a point estimate. This means the model produces uncertainty estimates alongside its predictions, which can be visualised as a confidence envelope.
+The main advantage of the Bayesian approach is that it gives a **posterior predictive distribution**, not just a point estimate. This means the model produces uncertainty estimates alongside its predictions, which can be visualised as a confidence interval.
 
 ![Bayesian Linear Regression: predicted vs actual](https://raw.githubusercontent.com/natwonglakhon/QLD_Electricity_Forecast/4b1e1199d92d196e9930ba2200905cb29bd8594e/images/BLR_predicted_vs_actual.png)
 
@@ -73,7 +73,7 @@ For the tree models, I include the discrete calendar features (day of week, week
 
 Both Random Forest and XGBoost are tree-based and therefore scale-invariant, so no normalisation is needed. They are fit on the same 80/20 chronological split.
 
-![XGBoost baseline: predicted vs actual](https://raw.githubusercontent.com/natwonglakhon/QLD_Electricity_Forecast/4b1e1199d92d196e9930ba2200905cb29bd8594e/images/XGB_predicted_vs_actual.png)
+![XGBoost with existing features: predicted vs actual](https://raw.githubusercontent.com/natwonglakhon/QLD_Electricity_Forecast/4b1e1199d92d196e9930ba2200905cb29bd8594e/images/XGB_predicted_vs_actual.png)
 
 #### Feature importance
 
@@ -87,12 +87,12 @@ As expected, `demand_now` dominates heavily. For a 1-hour ahead forecast, the cu
 
 | Model | MAPE |
 |---|---|
-| Bayesian Linear Regression | 1.01% |
-| Linear Regression (OLS) | 1.08% |
-| XGBoost | 1.18% |
-| Random Forest | 1.30% |
+| **Best** -- Linear Regression (baseline)| 1.01% |
+| Linear Regression (with features) | 1.08% |
+| XGBoost (with features) | 1.18% |
+| Random Forest (with features) | 1.30% |
 
-The headline result here is that for a 1-hour ahead forecast, **the linear models win**. The strong autoregressive structure in demand means that a linear combination of recent demand values is already a very effective predictor. Adding weather features or using tree models does not improve things much because the nonlinear patterns in demand, driven by temperature and time of day, play out over longer timescales than one hour.
+The main result here is that for a 1-hour ahead forecast, **the linear models win**. The strong autoregressive structure in demand means that a linear combination of recent demand values is already a very effective predictor. Adding weather features or using tree models does not improve things much because the nonlinear patterns in demand, driven by temperature and time of day, play out over longer timescales than one hour.
 
 The baseline demand lags alone are sufficient for professional-grade 1-hour forecasting.
 
@@ -100,7 +100,7 @@ The baseline demand lags alone are sufficient for professional-grade 1-hour fore
 
 ## Part II: 24-Hour Ahead Forecast
 
-Extending the horizon to 24 hours makes the problem substantially harder. The autoregressive signal weakens considerably, and you now need to model the full daily demand cycle, weather effects, and calendar patterns explicitly rather than letting recent lags carry the weight.
+Extending the horizon to 24 hours makes the problem substantially harder. The autoregressive feature weakens considerably, and we now need to model the full daily demand cycle, weather effects, and calendar patterns explicitly rather than letting recent lags carry the weight.
 
 ### Baseline features for 24-hour forecasting
 
@@ -135,7 +135,7 @@ Using `shift(freq="7D")` and `shift(freq="366D")` rather than counting steps ens
 
 ![Feature importance: XGBoost 24-hour baseline](https://raw.githubusercontent.com/natwonglakhon/QLD_Electricity_Forecast/4b1e1199d92d196e9930ba2200905cb29bd8594e/images/Feature_importance_xgb_24h.png)
 
-With baseline features only, the results across models are:
+With baseline and existing features, the results across models are:
 
 | Model | MAPE |
 |---|---|
@@ -144,9 +144,9 @@ With baseline features only, the results across models are:
 | Random Forest | 7.69% |
 | XGBoost | 7.59% |
 
-The tree models now hold a clear advantage over the linear models. The nonlinear demand patterns that play out over 24 hours, particularly the relationship between temperature and peak afternoon demand, are exactly the kind of structure tree models are good at capturing.
+The tree models now hold a clear advantage over the linear models. The nonlinear demand patterns that play out over 24 hours, particularly the relationship between temperature and peak afternoon demand, are the kind of structure tree models are good at capturing.
 
-But 7-8% MAPE is not great for an operational forecasting system. The next step is feature engineering.
+However, 7-8% MAPE is not great for an operational forecasting system. The next step is feature engineering.
 
 ---
 
@@ -174,19 +174,9 @@ features_num_agg[f"{loc}_{var}_rolling_mean_24h"] = features_num_agg[f"{loc}_{va
 features_num_agg[f"{loc}_{var}_rolling_std_24h"]  = features_num_agg[f"{loc}_{var}"].rolling(48).std()
 ```
 
-**Temperature difference** (apparent vs actual temperature) captures the humidity effect: a 35°C day with high humidity feels hotter and drives more air conditioning than a dry 35°C day.
+**Temperature difference** (apparent vs actual temperature) helps capturing the humidity effect: a 35°C day with high humidity feels hotter and drives more air conditioning than a dry 35°C day.
 
 **Weather lags** at 12h and 24h offsets are included for all weather variables across all three locations. For a 24-hour ahead model, using weather from 24 hours ago as a proxy for conditions at the forecast target time avoids leaking future information into the model.
-
-**Heatwave flag and count**: a heatwave is flagged when apparent temperature exceeds 36°C for 3 or more consecutive days. Rather than just a binary flag, I keep the running count of consecutive hot days as a feature too. Demand tends to escalate across the duration of a heatwave as buildings accumulate thermal mass, so day 5 of a heatwave is genuinely different from day 1.
-
-```python
-consecutive_hot = consecutive_count(hot_day)
-heatwave_days   = (consecutive_hot >= 3).astype(int)
-
-features_num_agg["is_heatwave"]      = features_num_agg.index.normalize().map(heatwave_days).fillna(0).astype(int)
-features_num_agg["heatwave_day_count"] = features_num_agg.index.normalize().map(consecutive_hot).fillna(0).astype(int)
-```
 
 ### Calendar engineering
 
@@ -230,7 +220,7 @@ features_num_agg["demand_daily_range"] = features_num_agg.index.normalize().map(
 
 ### 24-Hour Forecast: Summary
 
-| Model | MAPE (baseline features) | MAPE (engineered features) |
+| Model | MAPE (baseline/features) | MAPE (add engineered features) |
 |---|---|---|
 | Linear Regression (OLS) | 8.63% | ~8% |
 | Bayesian Linear Regression | 8.69% | ~8.7% |
