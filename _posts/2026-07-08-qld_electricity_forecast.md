@@ -47,11 +47,11 @@ The train/test split uses `shuffle=False` throughout this project to preserve ch
 
 The baseline linear regression already does surprisingly well. Demand has very strong *autocorrelation* over short horizons, which means knowing what demand was doing a few minutes ago is already highly informative about what it will do next.
 
-![Linear Regression baseline: predicted vs actual](https://raw.githubusercontent.com/natwonglakhon/QLD_Electricity_Forecast/4b1e1199d92d196e9930ba2200905cb29bd8594e/images/LR_predicted_vs_actual.png)
+![Linear Regression baseline: predicted vs actual](https://github.com/natwonglakhon/QLD_Electricity_Forecast/tree/4b577f011216608ff05f7c12562f3cd96439818b/images/LR_predicted_vs_actual.png)
 
 Adding weather and calendar features to the linear model gives only a marginal improvement, since the model can only capture linear relationships with those features.
 
-![Linear Regression with features: predicted vs actual](https://raw.githubusercontent.com/natwonglakhon/QLD_Electricity_Forecast/4b1e1199d92d196e9930ba2200905cb29bd8594e/images/LR1_predicted_vs_actual.png)
+![Linear Regression with features: predicted vs actual](https://github.com/natwonglakhon/QLD_Electricity_Forecast/tree/4b577f011216608ff05f7c12562f3cd96439818b/images/LR1_predicted_vs_actual.png)
 
 ### Bayesian Linear Regression
 
@@ -63,9 +63,9 @@ with $\epsilon \sim \mathcal{N}(0, \sigma)$ and $\vec{\beta} \sim \mathcal{N}(\m
 
 The main advantage of the Bayesian approach is that it gives a **posterior predictive distribution**, not just a point estimate. This means the model produces uncertainty estimates alongside its predictions, which can be visualised as a confidence interval.
 
-![Bayesian Linear Regression: predicted vs actual](https://raw.githubusercontent.com/natwonglakhon/QLD_Electricity_Forecast/4b1e1199d92d196e9930ba2200905cb29bd8594e/images/BLR_predicted_vs_actual.png)
+![Bayesian Linear Regression: predicted vs actual](https://github.com/natwonglakhon/QLD_Electricity_Forecast/tree/4b577f011216608ff05f7c12562f3cd96439818b/images/BLR_predicted_vs_actual.png)
 
-![Bayesian Linear Regression: prediction with uncertainty envelope](https://raw.githubusercontent.com/natwonglakhon/QLD_Electricity_Forecast/4b1e1199d92d196e9930ba2200905cb29bd8594e/images/BLR_prediction.png)
+![Bayesian Linear Regression: prediction with uncertainty envelope](https://github.com/natwonglakhon/QLD_Electricity_Forecast/tree/4b577f011216608ff05f7c12562f3cd96439818b/images/BLR_prediction.png)
 
 ### Tree Models (Random Forest and XGBoost)
 
@@ -73,17 +73,17 @@ For the tree models, I include the discrete calendar features (day of week, week
 
 Both Random Forest and XGBoost are tree-based and therefore scale-invariant, so no normalisation is needed. They are fit on the same 80/20 chronological split.
 
-![XGBoost with existing features: predicted vs actual](https://raw.githubusercontent.com/natwonglakhon/QLD_Electricity_Forecast/4b1e1199d92d196e9930ba2200905cb29bd8594e/images/XGB_predicted_vs_actual.png)
+![XGBoost with existing features: predicted vs actual](https://github.com/natwonglakhon/QLD_Electricity_Forecast/tree/4b577f011216608ff05f7c12562f3cd96439818b/images/XGB_predicted_vs_actual.png)
 
 #### Feature importance
 
-![Feature importance: XGBoost 1-hour model](https://raw.githubusercontent.com/natwonglakhon/QLD_Electricity_Forecast/4b1e1199d92d196e9930ba2200905cb29bd8594e/images/Feature_importance_xgb_1h.png)
+![Feature importance: XGBoost 1-hour model](https://github.com/natwonglakhon/QLD_Electricity_Forecast/tree/4b577f011216608ff05f7c12562f3cd96439818b/images/Feature_importance_xgb_1h.png)
 
 As expected, `demand_now` dominates heavily. For a 1-hour ahead forecast, the current demand reading is by far the most informative signal.
 
 ### 1-Hour Forecast: Summary
 
-![All models: 1-hour forecast comparison](https://raw.githubusercontent.com/natwonglakhon/QLD_Electricity_Forecast/4b1e1199d92d196e9930ba2200905cb29bd8594e/images/all_predicted_1h.png)
+![All models: 1-hour forecast comparison](https://github.com/natwonglakhon/QLD_Electricity_Forecast/tree/4b577f011216608ff05f7c12562f3cd96439818b/images/all_predicted_1h.png)
 
 | Model | MAPE |
 |---|---|
@@ -119,21 +119,21 @@ Using `shift(freq="7D")` and `shift(freq="366D")` rather than counting steps ens
 
 ### Linear Regression (OLS) with 24-hour features
 
-![Linear Regression: 24-hour forecast](https://raw.githubusercontent.com/natwonglakhon/QLD_Electricity_Forecast/4b1e1199d92d196e9930ba2200905cb29bd8594e/images/Lr_predicted_vs_actual_24.png)
+![Linear Regression: 24-hour forecast](https://github.com/natwonglakhon/QLD_Electricity_Forecast/tree/4b577f011216608ff05f7c12562f3cd96439818b/images/Lr_predicted_vs_actual_24.png)
 
 ### Bayesian Linear Regression
 
-![Bayesian LR: 24-hour forecast](https://raw.githubusercontent.com/natwonglakhon/QLD_Electricity_Forecast/4b1e1199d92d196e9930ba2200905cb29bd8594e/images/Bayes_predicted_vs_actual_24.png)
+![Bayesian LR: 24-hour forecast](https://github.com/natwonglakhon/QLD_Electricity_Forecast/tree/4b577f011216608ff05f7c12562f3cd96439818b/images/Bayes_predicted_vs_actual_24.png)
 
-![Bayesian LR: 24-hour forecast with uncertainty envelope](https://raw.githubusercontent.com/natwonglakhon/QLD_Electricity_Forecast/4b1e1199d92d196e9930ba2200905cb29bd8594e/images/Baye_pred_24h.png)
+![Bayesian LR: 24-hour forecast with uncertainty envelope](https://github.com/natwonglakhon/QLD_Electricity_Forecast/tree/4b577f011216608ff05f7c12562f3cd96439818b/images/Baye_pred_24h.png)
 
 ### Tree Models
 
-![XGBoost: 24-hour forecast](https://raw.githubusercontent.com/natwonglakhon/QLD_Electricity_Forecast/4b1e1199d92d196e9930ba2200905cb29bd8594e/images/XGboost_predicted_vs_actual_24.png)
+![XGBoost: 24-hour forecast](https://github.com/natwonglakhon/QLD_Electricity_Forecast/tree/4b577f011216608ff05f7c12562f3cd96439818b/images/XGboost_predicted_vs_actual_24.png)
 
 #### Feature importance (24-hour baseline model)
 
-![Feature importance: XGBoost 24-hour baseline](https://raw.githubusercontent.com/natwonglakhon/QLD_Electricity_Forecast/4b1e1199d92d196e9930ba2200905cb29bd8594e/images/Feature_importance_xgb_24h.png)
+![Feature importance: XGBoost 24-hour baseline](https://github.com/natwonglakhon/QLD_Electricity_Forecast/tree/4b577f011216608ff05f7c12562f3cd96439818b/images/Feature_importance_xgb_24h.png)
 
 With baseline and existing features, the results across models are:
 
@@ -206,17 +206,17 @@ features_num_agg["demand_daily_range"] = features_num_agg.index.normalize().map(
 
 ### Results with engineered features
 
-![Linear Regression: 24-hour forecast with engineered features](https://raw.githubusercontent.com/natwonglakhon/QLD_Electricity_Forecast/4b1e1199d92d196e9930ba2200905cb29bd8594e/images/LR_predicted_vs_actual_24agg.png)
+![Linear Regression: 24-hour forecast with engineered features](https://github.com/natwonglakhon/QLD_Electricity_Forecast/tree/4b577f011216608ff05f7c12562f3cd96439818b/images/LR_predicted_vs_actual_24agg.png)
 
-![XGBoost: 24-hour forecast with engineered features](https://raw.githubusercontent.com/natwonglakhon/QLD_Electricity_Forecast/4b1e1199d92d196e9930ba2200905cb29bd8594e/images/XGBoost_predicted_vs_actual_24agg.png)
+![XGBoost: 24-hour forecast with engineered features](https://github.com/natwonglakhon/QLD_Electricity_Forecast/tree/4b577f011216608ff05f7c12562f3cd96439818b/images/XGBoost_predicted_vs_actual_24agg.png)
 
-![XGBoost: 24-hour forecast time series](https://raw.githubusercontent.com/natwonglakhon/QLD_Electricity_Forecast/4b1e1199d92d196e9930ba2200905cb29bd8594e/images/XGBoost_predicted_24agg.png)
+![XGBoost: 24-hour forecast time series](https://github.com/natwonglakhon/QLD_Electricity_Forecast/tree/4b577f011216608ff05f7c12562f3cd96439818b/images/XGBoost_predicted_24agg.png)
 
-![All models: 24-hour forecast comparison](https://raw.githubusercontent.com/natwonglakhon/QLD_Electricity_Forecast/4b1e1199d92d196e9930ba2200905cb29bd8594e/images/all_predicted_24agg.png)
+![All models: 24-hour forecast comparison]https://github.com/natwonglakhon/QLD_Electricity_Forecast/tree/4b577f011216608ff05f7c12562f3cd96439818b/images/all_predicted_24agg.png)
 
 #### Feature importance with engineered features
 
-![Feature importance: XGBoost 24-hour engineered model](https://raw.githubusercontent.com/natwonglakhon/QLD_Electricity_Forecast/4b1e1199d92d196e9930ba2200905cb29bd8594e/images/Feature_importance_xgb_24h.png)
+![Feature importance: XGBoost 24-hour engineered model](https://github.com/natwonglakhon/QLD_Electricity_Forecast/tree/4b577f011216608ff05f7c12562f3cd96439818b/images/Feature_importance_xgb_24h.png)
 
 ### 24-Hour Forecast: Summary
 
