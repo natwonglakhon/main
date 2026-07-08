@@ -44,7 +44,7 @@ where we again ignore the constant (unrelated to $\vec\beta_t$). Note that the a
  * $\vec\Sigma_{t'} = (\hat\Sigma_t^{-1}+ \frac{\vec X_t^\top\cdot\vec X_t}{\sigma^2})^{-1}$ and
  * $\vec\mu_{t'}=\vec\Sigma_{t'}(\hat\Sigma_t^{-1}\cdot\vec\mu_t + \frac{\vec X_t^T y_t}{\sigma^2})$.
 
-The two expressions above give the recursive update for the parameter $\vec\beta_{t'}$. The time incoming observed feature will be fed and the vector $\vec\beta$ will be updated recursively. 
+The two expressions above give the recursive update for the parameter $\vec\beta_{t'}$. The time incoming observed features will be fed and the vector $\vec\beta$ will be updated recursively. 
 
 ## Implement the model using BayesianRidge
 From sklearn, BayesianRidge is available to use. However, BayesianRidge does *Empirical Bayes* which is slightly different from the theory. I will not go into details for now.
