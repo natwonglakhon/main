@@ -8,8 +8,8 @@ $$ y_t = \vec X_t^\top \cdot \vec\beta_t + \epsilon,$$
 where $y_t$ is the traget values, $\vec X_t = (x_1, \dots, x_n)$ is the observed features (with $n$ elements), $\vec \beta_t = (\beta_1, \dots, \beta_n)$ is an unknown random vector (we want to estimate), and $\epsilon$ is an unknown random variables.
 
 There are two assumptions made in this model:
- - $\epsilon \sim \mathcal{N}(0, \sigma)$. Meaning $\epsilon$ flucuates *normally* around zero with the variance $\sigma^2$. I'd like to think it is a bias of the model. (Of course, a good model should have zero bisas.)
- - $\vec \beta_t \sim \mathcal{N}(\mu_t, \Sigma_t)$. Meaning $\vec \beta_t$ is a normal random vector with $\vec \mu_t$ mean and $\vec \Sigma_t^2$ variance.
+ * $\epsilon \sim \mathcal{N}(0, \sigma)$. Meaning $\epsilon$ flucuates *normally* around zero with the variance $\sigma^2$. I'd like to think it is a bias of the model. (Of course, a good model should have zero bisas.)
+ * $\vec \beta_t \sim \mathcal{N}(\mu_t, \Sigma_t)$. Meaning $\vec \beta_t$ is a normal random vector with $\vec \mu_t$ mean and $\vec \Sigma_t^2$ variance.
 
  **The question is how do we update** $\vec \beta_t$?
 
@@ -33,8 +33,8 @@ We can rearrage the expression above in the following form:
 $$p(\vec\beta_t|y_t) \propto \exp[-\frac{1}{2}(\vec\beta_t-\vec\mu_{t'})^\top \vec \Sigma_{t'} (\vec\beta_t-\vec\mu_{t'})],$$
 where we agian ignore the constant (unrelated to $\vec\beta_t$) and find that
 
- - $\vec\Sigma_{t'} = (\vec\Sigma_t^{-1}+ \frac{\vec X_t^\top\vec X_t}{\sigma^2})^{-1}$ and
- - $\vec\mu_{t'}=\vec\Sigma_{t'}(\vec\Sigma_t^{-1}\vec\mu_t + \frac{\vec X_t^T y_t}{\sigma^2})$.
+ * $\vec\Sigma_{t'} = (\vec\Sigma_t^{-1}+ \frac{\vec X_t^\top\vec X_t}{\sigma^2})^{-1}$ and
+ * $\vec\mu_{t'}=\vec\Sigma_{t'}(\vec\Sigma_t^{-1}\vec\mu_t + \frac{\vec X_t^T y_t}{\sigma^2})$.
 
  The two expressions above give the recusive update for the parameter $\vec\beta_{t'}$.
 
