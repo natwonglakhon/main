@@ -20,7 +20,7 @@ Answer, use Bayes' rule.
 
 **The prior**: From the second assumption, we may write the distribution of $\vec \beta_t$ as:
 
-$$p(\vec\beta_t) \propto \exp\left[-\frac{1}{2}(\vec\beta_t - \vec\mu_t)^\top \vec \Sigma_t^{-1}(\vec \beta_t-\vec\mu_t)\right],$$
+$$p(\vec\beta_t) \propto \exp\left[-\frac{1}{2}(\vec\beta_t - \vec\mu_t)^\top \hat\Sigma_t^{-1}(\vec \beta_t-\vec\mu_t)\right],$$
 
 where I have ignored the normalisation by leaving it with the proportional sign.
 
