@@ -215,7 +215,7 @@ features_num_agg["demand_daily_range"] = features_num_agg.index.normalize().map(
 
 ![XGBoost: 24-hour forecast time series](https://github.com/natwonglakhon/QLD_Electricity_Forecast/blob/4b577f011216608ff05f7c12562f3cd96439818b/images/XGBoost_predicted_24agg.png?raw=true)
 
-![All models: 24-hour forecast comparison]https://github.com/natwonglakhon/QLD_Electricity_Forecast/blob/4b577f011216608ff05f7c12562f3cd96439818b/images/all_predicted_24agg.png?raw=true)
+![All models: 24-hour forecast comparison](https://github.com/natwonglakhon/QLD_Electricity_Forecast/blob/4b577f011216608ff05f7c12562f3cd96439818b/images/all_predicted_24agg.png?raw=true)
 
 #### Feature importance with engineered features
 
