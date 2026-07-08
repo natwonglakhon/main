@@ -32,7 +32,7 @@ For the baseline model, I use only demand lags as predictors. The model is formu
 
 $$\hat{y}_{t+1} = \beta_0 + \beta_1 D_t + \beta_2 D_{t-1} + \beta_3 D_{t-2}$$
 
-where $\hat{y}_{t+1}$ is the predicted demand one hour ahead, $D_t$ is the current demand, and $D_{t-1}$, $D_{t-2}$ are demand one and two hours ago. Since the data is at 30-minute resolution, one hour corresponds to two lags.
+where $ \hat{y}_{t+1} $ is the predicted demand one hour ahead, $D_t$ is the current demand, and $ D_{t-1} $, $ D_{t-2} $ are demand one and two hours ago. Since the data is at 30-minute resolution, one hour corresponds to two lags.
 
 ```python
 df["demand_now"] = df["TOTALDEMAND"]
@@ -257,6 +257,6 @@ The main findings from this project are:
 
 For **1-hour ahead forecasting**, the simple autoregressive signal in demand is so strong that a linear model on three demand lags achieves 1.01% MAPE. Tree models don't add much. Feature engineering doesn't help much either. The problem is already well-solved by knowing what demand was doing recently.
 
-For **24-hour ahead forecasting**, the story is completely different. Baseline models sit around 7.5-8.6% MAPE regardless of model type. Careful feature engineering, particularly the heatwave count, cooling/heating degree days, daily demand range, and hour of day, brings XGBoost down to 4.59% MAPE, which is within the industry-standard range for short-term load forecasting.
+For **24-hour ahead forecasting**, the story is completely different. Baseline models sit around 7.5-8.6% MAPE regardless of model type. Careful feature engineering, particularly the cooling/heating degree days, daily demand range, and hour of day, brings XGBoost down to 4.59% MAPE, which is within the industry-standard range for short-term load forecasting.
 
 The clearest path to further improvement would be replacing lagged weather with actual weather forecasts from a service like the BOM or Open-Meteo forecast API. Right now the model uses yesterday's weather as a proxy for tomorrow's weather, which works reasonably well given Queensland's climate patterns, but a genuine 24-hour-ahead temperature forecast would almost certainly push the MAPE below 4%.
