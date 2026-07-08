@@ -62,7 +62,7 @@ I also fit a Bayesian linear regression using the baseline features. The Bayesia
 
 $$\hat{y}_{t+1} = \beta_1 D_t + \beta_2 D_{t-1} + \beta_3 D_{t-2} + \epsilon$$
 
-with $\epsilon \sim \mathcal{N}(0, \sigma)$ and $\vec{\beta} \sim \mathcal{N}(\mu_t, \Sigma_t)$. The prior distribution will be updated using Baye's rule and yielding a *posterior* statisitics. For technical people, I also add some derivations and how the model works [here](https://natwonglakhon.github.io/main/Bayesian_Inference/).
+with $\epsilon \sim \mathcal{N}(0, \sigma)$ and $\vec{\beta} \sim \mathcal{N}(\mu_t, \Sigma_t)$. The prior distribution will be updated using Baye's rule and yielding a *posterior* statisitics. For technical people, I also add some derivations and how the model works [here](https://natwonglakhon.github.io/main/Bayesian-Inference/).
 
 The main advantage of the Bayesian approach is that it gives a **posterior distribution**, not just a point estimate. This means the model produces uncertainty estimates alongside its predictions, which can be visualised as a confidence interval.
 
