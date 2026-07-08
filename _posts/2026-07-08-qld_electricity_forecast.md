@@ -1,4 +1,4 @@
-# Probabilistic Electricity Demand Forecasting for Queensland Using Machine Learning
+# Forecasting Queensland Electricity Demand: Why Simple Models Beat Complex Ones at Short Horizons
 
 Electricity demand forecasting is one of the core problems in energy market operations. Grid operators need to know how much electricity will be consumed in the coming hours so they can dispatch the right amount of generation, keep the system stable, and avoid unnecessary costs. Getting it wrong in either direction is expensive: too little and you risk blackouts, too much and you're wasting money on generation that isn't needed.
 
@@ -58,13 +58,13 @@ Adding weather and calendar features to the linear model gives only a marginal i
 
 ### Bayesian Linear Regression
 
-I also fit a Bayesian linear regression using the baseline features. The Bayesian formulation treats the model coefficients as random variables with a prior distribution that gets updated during training:
+I also fit a Bayesian linear regression using the baseline features. The Bayesian formulation treats the model coefficients as random variables with a *prior* distribution that gets updated during training:
 
 $$\hat{y}_{t+1} = \beta_1 D_t + \beta_2 D_{t-1} + \beta_3 D_{t-2} + \epsilon$$
 
-with $\epsilon \sim \mathcal{N}(0, \sigma)$ and $\vec{\beta} \sim \mathcal{N}(\mu_0, \Sigma_0)$. For technical people, I also add some derivations and how the model work here.
+with $\epsilon \sim \mathcal{N}(0, \sigma)$ and $\vec{\beta} \sim \mathcal{N}(\mu_t, \Sigma_t)$. The prior distribution will be updated using Baye's rule and yielding a *posterior* statisitics. For technical people, I also add some derivations and how the model work here.
 
-The main advantage of the Bayesian approach is that it gives a **posterior predictive distribution**, not just a point estimate. This means the model produces uncertainty estimates alongside its predictions, which can be visualised as a confidence interval.
+The main advantage of the Bayesian approach is that it gives a **posterior distribution**, not just a point estimate. This means the model produces uncertainty estimates alongside its predictions, which can be visualised as a confidence interval.
 
 ![Bayesian Linear Regression: predicted vs actual](https://github.com/natwonglakhon/QLD_Electricity_Forecast/blob/4b577f011216608ff05f7c12562f3cd96439818b/images/BLR_predicted_vs_actual.png?raw=true)
 
@@ -97,7 +97,7 @@ As expected, `demand_now` dominates heavily. For a 1-hour ahead forecast, the cu
 
 The main result here is that for a 1-hour ahead forecast, **the linear models win**. The strong autoregressive structure in demand means that a linear combination of recent demand values is already a very effective predictor. Adding weather features or using tree models does not improve things much because the nonlinear patterns in demand, driven by temperature and time of day, play out over longer timescales than one hour.
 
-The baseline demand lags alone are sufficient for professional-grade 1-hour forecasting.
+The baseline demand lags alone provide highly accurate short-term forecasts for this dataset.
 
 ---
 
@@ -238,9 +238,9 @@ The most important features in the final XGBoost model are hour of day and deman
 
 One unexpected result is that Rockhampton temperature consistently ranks higher in feature importance than Brisbane temperature, despite Brisbane having more than half of Queensland's population. The initial expectation was that SEQ demand would dominate.
 
-A few things probably explain this. The Bowen Basin coal mining operations and associated industrial load in Central Queensland are enormous electricity consumers, and they are highly temperature-sensitive for cooling and ventilation. When Rockhampton runs hot, that industrial load spikes in a way that may be more predictable and more extreme than the diffuse residential air conditioning response in Brisbane. It's also possible that Brisbane temperature is somewhat collinear with the demand lag features (hot Brisbane days and high recent demand tend to co-occur), so the tree splits assign the overlapping signal to demand lags and leave Rockhampton temperature to pick up the residual variation.
+A few things probably explain this. One possible explanation is the large industrial electricity demand associated with Central Queensland's mining sector. The coal mining operations and associated industrial load in Central Queensland are enormous electricity consumers, and they are highly temperature-sensitive for cooling and ventilation. When Rockhampton runs hot, that industrial load spikes in a way that may be more predictable and more extreme than the diffuse residential air conditioning response in Brisbane. It's also possible that Brisbane temperature is somewhat collinear with the demand lag features (hot Brisbane days and high recent demand tend to co-occur), so the tree splits assign the overlapping signal to demand lags and leave Rockhampton temperature to pick up the residual variation.
 
-This is worth investigating further, particularly with respect to how mining industry activity interacts with demand patterns.
+However, this hypothesis would require additional industrial load data to verify, particularly with respect to how mining industry activity interacts with demand patterns.
 
 ---
 
@@ -252,5 +252,8 @@ For **1-hour ahead forecasting**, the simple autoregressive signal in demand is 
 
 For **24-hour ahead forecasting**, the story is completely different. Baseline models sit around 7.5-8.6% MAPE regardless of model type. Careful feature engineering, particularly the cooling/heating degree days, daily demand range, and hour of day, brings XGBoost down to 4.59% MAPE, which is within the industry-standard range for short-term load forecasting.
 
+An important lesson from this project is that increasing model complexity does *not* necessarily improve forecasting performance. For one-hour-ahead forecasting, demand persistence dominates and simple linear models perform exceptionally well. For longer forecasting horizons, however, nonlinear interactions between weather, seasonality, and historical demand become increasingly important, allowing tree-based models with carefully engineered features to substantially outperform linear models.
+
+### Future work
 The clearest path to further improvement would be replacing lagged weather with actual weather forecasts from a service like the BOM or Open-Meteo forecast API. Right now the model uses yesterday's weather as a proxy for tomorrow's weather, which works reasonably well given Queensland's climate patterns, but a genuine 24-hour-ahead temperature forecast would almost certainly push the MAPE below 4%. Moreover, further optimising the tree models would also improve the models. I will leave that for future investigation. 
 
