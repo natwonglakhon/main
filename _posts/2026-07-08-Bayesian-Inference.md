@@ -36,7 +36,7 @@ $$p(\vec\beta_t \mid y_t) \propto \exp\left[-\frac{1}{2}(y_t- \vec X_t^\top \cdo
 
 Note that it is just an exponential of a scalar so we can combine the argument together.
 
-We can rearrange the expression above in the following form:
+We can rearrange the expression above in the following form (via complete square):
 
 $$p(\vec\beta_t \mid y_t) \propto \exp\left[-\frac{1}{2}(\vec\beta_t-\vec\mu_{t'})^\top \vec \Sigma_{t'} (\vec\beta_t-\vec\mu_{t'})\right],$$
 
