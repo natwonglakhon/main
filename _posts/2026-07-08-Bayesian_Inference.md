@@ -9,4 +9,11 @@ where $y_t$ is the traget values, $\vec X_t = (x_1, \dots, x_n)$ is the observed
 
 There are two assumptions made in this model:
  - $\epsilon \sim \mathcal{N}(0, \sigma)$. Meaning $\epsilon$ flucuates *normally* around zero with the variance $\sigma^2$. I'd like to think it is a bias of the model. (Of course, a good model should have zero bisas.)
- - $\vec \beta_t \sim \mathcal{N}(\mu_t, \Sigma_t)$. Meaning $\vec \beta_t$ is a normal random vector with $\vec \mu_t$ mean and $\vec \Sigma_t^2$ variance. 
+ - $\vec \beta_t \sim \mathcal{N}(\mu_t, \Sigma_t)$. Meaning $\vec \beta_t$ is a normal random vector with $\vec \mu_t$ mean and $\vec \Sigma_t^2$ variance.
+
+ ## The question is how do we update $\vec \beta_t$?
+
+ Answer, use Baye's rule.
+
+**The prior**: From the second assumption, we may write the distribution of $\vec \beta_t$ as:
+$$p(\vec\beta_t) = \exp[-\frac{1}{2}(\vec\beta_t - \vec\mu_t)^\top \vec \Sigma_t^{-1}(\vec \beta_t-\vec\mu_t)].$$
