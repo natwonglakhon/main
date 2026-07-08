@@ -241,7 +241,7 @@ This is worth investigating further, particularly with respect to how mining ind
 
 ---
 
-## Conclusion
+## Conclusion and Discussion
 
 The main findings from this project are:
 
@@ -249,4 +249,5 @@ For **1-hour ahead forecasting**, the simple autoregressive signal in demand is 
 
 For **24-hour ahead forecasting**, the story is completely different. Baseline models sit around 7.5-8.6% MAPE regardless of model type. Careful feature engineering, particularly the cooling/heating degree days, daily demand range, and hour of day, brings XGBoost down to 4.59% MAPE, which is within the industry-standard range for short-term load forecasting.
 
-The clearest path to further improvement would be replacing lagged weather with actual weather forecasts from a service like the BOM or Open-Meteo forecast API. Right now the model uses yesterday's weather as a proxy for tomorrow's weather, which works reasonably well given Queensland's climate patterns, but a genuine 24-hour-ahead temperature forecast would almost certainly push the MAPE below 4%.
+The clearest path to further improvement would be replacing lagged weather with actual weather forecasts from a service like the BOM or Open-Meteo forecast API. Right now the model uses yesterday's weather as a proxy for tomorrow's weather, which works reasonably well given Queensland's climate patterns, but a genuine 24-hour-ahead temperature forecast would almost certainly push the MAPE below 4%. Moreover, futhure optimising the tree models would also improve the models. I will leave that for future investigation. 
+
