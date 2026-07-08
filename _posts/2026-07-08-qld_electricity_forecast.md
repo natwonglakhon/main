@@ -4,7 +4,7 @@ Electricity demand forecasting is one of the core problems in energy market oper
 
 In this project, I build machine learning models to forecast Queensland's electricity demand at 30-minute resolution, using publicly available data from AEMO, the Open-Meteo weather API, and Queensland public holiday records. I look at two forecasting horizons: predicting demand for the **next hour** and predicting demand for the **next 24 hours**. These are quite different problems, and as we'll see, they call for different modelling approaches.
 
-The full code is available at [github.com/natwonglakhon/QLD_Electricity_Forecast](https://github.com/natwonglakhon/QLD_Electricity_Forecast).
+The full code is available at [github](https://github.com/natwonglakhon/QLD_Electricity_Forecast).
 
 ---
 
@@ -32,7 +32,10 @@ For the baseline model, I use only demand lags as predictors. The model is formu
 
 $$\hat{y}_{t+1} = \beta_0 + \beta_1 D_t + \beta_2 D_{t-1} + \beta_3 D_{t-2}$$
 
-where $\hat{y}_{t+1}$ is the predicted demand one hour ahead, $D_t$ is the current demand, and $D_{t-1}, D_{t-2}$ are demand one and two hours ago. Since the data is at 30-minute resolution, one hour corresponds to two lags.
+where 
+ - $\hat{y}_{t+1}$ is the predicted demand one hour ahead, 
+ - $D_t$ is the current demand, and 
+ - $D_{t-1}, D_{t-2}$ are demand one and two hours ago. Since the data is at 30-minute resolution, one hour corresponds to two lags.
 
 ```python
 df["demand_now"] = df["TOTALDEMAND"]
