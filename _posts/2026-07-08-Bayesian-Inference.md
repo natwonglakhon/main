@@ -38,7 +38,7 @@ Note that it is just an exponential of a scalar so we can combine the argument t
 
 We can rearrange the expression above in the following form (via complete square):
 
-$$p(\vec\beta_t \mid y_t) \propto \exp\left[-\frac{1}{2}(\vec\beta_t-\vec\mu_{t'})^\top \vec \Sigma_{t'} (\vec\beta_t-\vec\mu_{t'})\right],$$
+$$p(\vec\beta_t \mid y_t) \propto \exp\left[-\frac{1}{2}(\vec\beta_t-\vec\mu_{t'})^\top \vec \Sigma_{t'}^{-1} (\vec\beta_t-\vec\mu_{t'})\right],$$
 
 where we again ignore the constant (unrelated to $\vec\beta_t$). Note that the above expression can be achieve by using the symetric property of $\hat\Sigma_t^{-1}$. We find the updated mean and variance as
  * $\vec\Sigma_{t'} = (\hat\Sigma_t^{-1}+ \frac{\vec X_t^\top\cdot\vec X_t}{\sigma^2})^{-1}$ and
