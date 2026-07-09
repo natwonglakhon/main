@@ -27,7 +27,7 @@ For the second project of my PhD, I investigated controlled quantum systems subj
 
 Modelling and Machine Learning projects
 ======
-* [Forecasting Queensland Electricity Demand: Why Simple Models Beat Complex Ones at Short Horizons](https://natwonglakhon.github.io/main/qld_electricity_forecast/)
+* [Forecasting Queensland Electricity Demand: Why Simple Models Beat Complex Ones at Short Horizons](https://natwonglakhon.github.io/main/QLD-electricity-demand-forecast/)
 * [All you need to know about all Tyalor Swift's lyrics.](https://natwonglakhon.github.io/main/taylor-swift-lyrics-analysis/)
 * [Housing price model predictions.](https://natwonglakhon.github.io/main/California-Housing/)
 * [Quantum trajectory simulations: stochastic modelling.](https://natwonglakhon.github.io/main/Quantum-Trajectories/)
