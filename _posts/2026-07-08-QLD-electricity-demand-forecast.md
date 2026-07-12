@@ -29,7 +29,7 @@ The full code is available at [Github](https://github.com/natwonglakhon/QLD_Elec
     - [Results with engineered features](#results-with-engineered-features)
   - [24-Hour Forecast: Summary](#24-hour-forecast-summary)
   - [A surprising finding: Rockhampton vs Brisbane](#a-surprising-finding-rockhampton-vs-brisbane)
-- [Conclusion](#conclusion)
+- [Conclusion](#conclusion-and-future-work)
 
 
 ---
@@ -274,7 +274,7 @@ However, this hypothesis would require additional industrial load data to verify
 
 ---
 
-## Conclusion and Discussion
+## Conclusion and Future work
 
 The main findings from this project are:
 
@@ -285,7 +285,7 @@ For **24-hour ahead forecasting**, the story is completely different. Baseline m
 An important lesson from this project is that increasing model complexity does *not* necessarily improve forecasting performance. For one-hour-ahead forecasting, demand persistence dominates and simple linear models perform exceptionally well. For longer forecasting horizons, however, nonlinear interactions between weather, seasonality, and historical demand become increasingly important, allowing tree-based models with carefully engineered features to substantially outperform linear models.
 
 ### What decisions could someone make using these models?
-Accurate electricity demand forecasting supports a wide range of operational and planning decisions in power systems. While this project focuses on predictive modelling, the resulting forecasts could be used to inform decisions such as: generation scheduling, demand response programs, and Maintenance planning.
+Accurate electricity demand forecasting supports a wide range of operational and planning decisions in power systems. While this project focuses on predictive modelling, the resulting forecasts could be used to inform decisions such as: generation scheduling, demand response programs, and maintenance planning.
 
 ### Future work
 The clearest path to further improvement would be replacing lagged weather with the **weather forecasts**. Right now the model uses yesterday's weather as a proxy for tomorrow's weather, which works reasonably well given Queensland's climate patterns, but a genuine 24-hour-ahead temperature forecast would almost certainly push the MAPE below 4%. Moreover, further **optimising** the tree models would also improve the models. I will leave that for future investigation. 
