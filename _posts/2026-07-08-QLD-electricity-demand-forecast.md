@@ -8,6 +8,32 @@ The full code is available at [Github](https://github.com/natwonglakhon/QLD_Elec
 
 ---
 
+## Table of Contents
+
+- [Data](#data)
+- [Part I: 1-Hour Ahead Forecast](#part-i-1-hour-ahead-forecast)
+  - [Baseline formulation](#baseline-formulation)
+  - [Linear Regression (OLS)](#linear-regression-ols)
+  - [Bayesian Linear Regression](#bayesian-linear-regression)
+  - [Tree Models (Random Forest and XGBoost)](#tree-models-random-forest-and-xgboost)
+  - [1-Hour Forecast: Summary](#1-hour-forecast-summary)
+- [Part II: 24-Hour Ahead Forecast](#part-ii-24-hour-ahead-forecast)
+  - [Baseline features for 24-hour forecasting](#baseline-features-for-24-hour-forecasting)
+  - [Linear Regression (OLS)](#linear-regression-ols-1)
+  - [Bayesian Linear Regression](#bayesian-linear-regression-1)
+  - [Tree Models](#tree-models)
+  - [Part II.IV: Engineered Features](#part-iiiv-engineered-features)
+    - [Weather engineering](#weather-engineering)
+    - [Calendar engineering](#calendar-engineering)
+    - [Demand engineering](#demand-engineering)
+    - [Results with engineered features](#results-with-engineered-features)
+  - [24-Hour Forecast: Summary](#24-hour-forecast-summary)
+  - [A surprising finding: Rockhampton vs Brisbane](#a-surprising-finding-rockhampton-vs-brisbane)
+- [Conclusion](#conclusion)
+
+
+---
+
 ## Data
 
 Three data sources are merged into a single flat file for modelling.
