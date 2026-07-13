@@ -8,6 +8,16 @@ The full code is available at [Github](https://github.com/natwonglakhon/QLD_Elec
 
 ---
 
+## Key results
+
+- Built forecasting models using ~103,000 half-hourly observations from AEMO and Open-Meteo.
+- Compared Linear Regression, Bayesian Linear Regression, Random Forest, and XGBoost.
+- Achieved **1.01% MAPE for 1-hour forecasts** using only three autoregressive demand lags.
+- Achieved **4.59% MAPE for 24-hour forecasts** using XGBoost with engineered weather, calendar, and demand features.
+- Demonstrated that model complexity only becomes beneficial once the forecast horizon is sufficiently long.
+
+---
+
 ## Table of Contents
 
 - [Data](#data)
