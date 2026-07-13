@@ -40,7 +40,7 @@ The full code is available at [Github](https://github.com/natwonglakhon/QLD_Elec
     - [Demand engineering](#demand-engineering)
     - [Results with engineered features](#results-with-engineered-features)
   - [24-Hour Forecast: Summary](#24-hour-forecast-summary)
-  - [A surprising finding: Rockhampton vs Brisbane](#rockhampton-(central-qld)-vs-brisbane-(southeast-qld))
+  - [A surprising finding: Rockhampton (Central QLD) vs Brisbane (Southeast QLD)](#a-surprising-finding-rockhampton-(central-qld)-vs-brisbane-(southeast-qld))
 - [Conclusion](#conclusion-and-future-work)
 
 
