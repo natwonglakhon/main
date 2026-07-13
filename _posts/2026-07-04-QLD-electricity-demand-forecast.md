@@ -54,7 +54,7 @@ Three data sources are merged into a single flat file for modelling.
 
 **Weather data** comes from the Open-Meteo historical archive API at hourly resolution, collected for three locations across Queensland: Brisbane (south), Rockhampton (central), and Townsville (north). Covering three locations reflects the geographic scale of Queensland's grid. The variables are apparent temperature, temperature at 2m, dew point, relative humidity, and rainfall.
 
-*Data Cleaning:* There are some missing data from errors/malfunctioning detectors. There, I replace the null data with *lienar interpolation* as the weather data should be gradually changing via linear relationship.
+*Data Cleansing:* There are some missing data from errors/malfunctioning detectors. There, I replace the null data with *lienar interpolation* as the weather data should be gradually changing via linear relationship.
 
 Note that more than half of Queensland's population lives in the southeast, so the expectation going in was that Brisbane weather would dominate the models. However, I found that the speculation turned out to be wrong, and I'll come back to why.
 
