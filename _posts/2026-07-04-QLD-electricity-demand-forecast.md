@@ -17,6 +17,7 @@ The full code is available at [Github](https://github.com/natwonglakhon/QLD_Elec
 - Demonstrated that model complexity only becomes beneficial once the forecast horizon is sufficiently long.
 
 *Note: MAPE is mean absolute percentage error.*
+
 ---
 
 ## Table of Contents
