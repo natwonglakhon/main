@@ -16,6 +16,7 @@ The full code is available at [Github](https://github.com/natwonglakhon/QLD_Elec
 - Achieved **4.59% MAPE for 24-hour forecasts** using XGBoost with engineered weather, calendar, and demand features.
 - Demonstrated that model complexity only becomes beneficial once the forecast horizon is sufficiently long.
 
+*Note: MAPE is mean absolute percentage error.*
 ---
 
 ## Table of Contents
@@ -91,6 +92,8 @@ The train/test split uses `shuffle=False` throughout this project to preserve ch
 The baseline linear regression already does surprisingly well. Demand has very strong *autoregression* over short horizons, which means knowing what demand was doing a few minutes ago is already highly informative about what it will do next.
 
 ![Linear Regression baseline: predicted vs actual](https://github.com/natwonglakhon/QLD_Electricity_Forecast/blob/4b577f011216608ff05f7c12562f3cd96439818b/images/LR_predicted_vs_actual.png?raw=true?raw=true)
+
+*Note: $R^2$ explains how well the model predicts an outcome ($R^2=1$ is perfect), MSE stands for mean squared error, MAE for mean absolute error.*
 
 Adding weather features to the linear model is not found to give an improvement. The reason for this may be because the model can only capture linear relationships with those features, while the features themsalves exhibit non-linear relationships.
 
