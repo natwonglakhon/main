@@ -1,6 +1,6 @@
 # Forecasting Queensland Electricity Demand: Why Simple Models Beat Complex Ones at Short Horizons
 
-Electricity demand forecasting is one of the core problems in energy market operations. Grid operators need to know how much electricity will be consumed in the coming hours so they can dispatch the right amount of generation, keep the system stable, and avoid unnecessary costs. Getting it wrong in either direction is expensive: too little and you risk blackouts, too much and you're wasting money on generation that isn't needed.
+Electricity demand forecasting is one of the core problems in energy market operations. Grid operators need to know how much electricity will be consumed in the coming hours so they can dispatch the right amount of generation, keep the system stable, and avoid unnecessary costs. Getting it wrong in either direction is expensive: too little and you risk blackouts, too much and you are wasting money on generation that is not needed.
 
 In this project, I build machine learning models to forecast Queensland's electricity demand at 30-minute resolution. Here, I use publicly available data from AEMO, the Open-Meteo weather API, and Queensland public holiday records. I look at two forecasting horizons: predicting demand for the **next hour** and predicting demand for the **next 24 hours**. Importantly, these are quite different problems, and as we shall see, they call for different modelling approaches.
 
@@ -278,7 +278,7 @@ Note that the standard deviation above is computed via the residual between the 
 | Random Forest | 7.69% | 4.92% |
 | **Best**-- XGBoost | 7.59% | 4.59% |
 
-Feature engineering delivers a significant drop for the tree models, from around 7.5% down to 4.59% for XGBoost (40% drop). The linear models see only a modest improvement because they can't exploit the nonlinear structure in the engineered features the way tree models can.
+Feature engineering delivers a significant drop for the tree models, from around 7.5% down to 4.59% for XGBoost (40% drop). The linear models see only a modest improvement because they cannot exploit the nonlinear structure in the engineered features the way tree models can.
 
 The most important features in the final XGBoost model are hour of day and demand daily range, which makes physical sense: the hour determines where in the daily demand cycle you are, and the demand range tells you how extreme that day's temperature-driven variation has been.
 
