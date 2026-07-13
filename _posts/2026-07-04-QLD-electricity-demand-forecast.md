@@ -282,13 +282,13 @@ Feature engineering delivers a significant drop for the tree models, from around
 
 The most important features in the final XGBoost model are hour of day and demand daily range, which makes physical sense: the hour determines where in the daily demand cycle you are, and the demand range tells you how extreme that day's temperature-driven variation has been.
 
-### A surprising finding: Rockhampton vs Brisbane
+### A surprising finding: Rockhampton (Central QLD) vs Brisbane (Southeast QLD) 
 
 One unexpected result is that Rockhampton temperature consistently ranks higher in feature importance than Brisbane temperature, despite Brisbane having more than half of Queensland's population. The initial expectation was that SEQ demand would dominate.
 
-A few things probably explain this. One is the large industrial electricity demand associated with Central Queensland's mining sector. The coal mining operations and associated industrial load in Central Queensland are enormous electricity consumers, and they are highly temperature-sensitive for cooling and ventilation. When Central Queensland runs hot, that industrial load spikes in a way that may be more predictable and more extreme than the diffuse residential air conditioning response in Brisbane. It is also possible that Brisbane temperature is somewhat *collinear* with the demand lag features (hot Brisbane days and high recent demand tend to co-occur), so the tree splits assign the overlapping signal to demand lags and thus leave Rockhampton temperature to pick up the residual variation.
+A few speculations probably explain this. One is the large industrial electricity demand associated with Central Queensland's mining sector. The coal mining operations and associated industrial load in Central Queensland are enormous electricity consumers, and they can be highly temperature-sensitive for cooling and ventilation. When Central Queensland runs hot, that industrial load spikes in a way that may be more predictable and more extreme than the diffuse residential air conditioning response in Southeast Queensland. It is also possible that Southeast Queensland temperature is somewhat *collinear* with the demand lag features (hot Brisbane days and high recent demand tend to co-occur), so the tree splits assign the overlapping signal to demand lags and thus leave Rockhampton temperature to pick up the residual variation.
 
-However, this hypothesis would require additional industrial load data to verify, particularly with respect to how mining industry activity interacts with demand patterns.
+However, these hypotheses would require additional industrial load data to verify, particularly with respect to how mining industry activity interacts with demand patterns.
 
 ---
 
